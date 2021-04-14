@@ -263,20 +263,40 @@ abstract here
 \subsection{Data reduction}
 TYC 2597-735-1 was observed by Chandra on 2007-11-26 for 8.7~ks. 
 We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4.13.0 \citep{2006SPIE.6270E..1VF} in the VFAINT mode, which reduces the background compared to the default FAINT mode processing. This is a serendipitous observation where TYC 2597-735-1 falls by chance on one of the outer CCDs (CCD S2 on the ACIS-S array). TYC 2597-735-1 is located close to the chip edge and only a fraction of the H$\alpha$ and UV emitting regions around the central star is covered in the observations. Because TYC 2597-735-1 is located off-axis, the PSF is significantly wider than on-axis. Figure~\ref{fig:chandraimage} shows the positions of individual X-ray photons overlayed on the H$\alpha$ images and UV emission contours from \citet{2020Natur.587..387H}, limited to a soft X-ray band. 
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/chandraimage.pdf}
+    \caption{X-ray emission around TYC 2597-735-1. The greyscale image shows H$\alpha$ emission and the white contours outline the UV emission. Data for both is taken from \citet{2020Natur.587..387H}, see there for details. The colored squares mark the position of individual X-ray photons, where the color denotes the energy of each particular photon. Only photons in the energy range given on the color bar are shown. Yellow circles mark the position of the three detected sources and their 90\% PSF size, which we use as the extraction region to extract spectra. The thin yellow lines outlines the area covered by Chandra in the observation.}
+    \label{fig:chandraimage}
+\end{figure*}
 
 \subsection{Source detection}
-Because of the large distance, we expect any source associated with TYC 2597-735-1 or its outflow to be absorbed, so we construct a narrow band image in the 1-2~keV range and run a source detection with the CIAO \texttt{wavdetect} task, which convolves the input image with a wavelet, taking the size of the PSF at that image location into account. We bin up the image such that it contains $2.6\times10^4$ pixels in Chandra's field-of-view and set the significant threshold such that we expect no more than one false detection in $10^5$~pixels. That way, any source detected by \texttt{wavdetect} is likely to be real. We find three sources, all of which coincide with UV/optical emission feature.
+Because of the large distance, we expect any source associated with TYC 2597-735-1 or its outflow to be absorbed, so we construct a narrow band image in the 1-2~keV range and run a source detection with the CIAO \texttt{wavdetect} task, which convolves the input image with a wavelet, taking the size of the PSF at that image location into account. We bin up the image such that it contains $2.6\times10^4$ pixels in Chandra's field-of-view and set the significant threshold such that we expect no more than one false detection in $10^5$~pixels. That way, any source detected by \texttt{wavdetect} is likely to be real. We find three sources, all of which coincide with UV/optical emission feature. All three sources have similar count rates and similar PSF sizes and thus similar positional uncertainties of about 2\arcsec{}.
 
 We detect a source at the location of TYC 2597-735-1 with (in our narrow band image) $9\pm3$ counts on a background of $1.52\pm0.01$ counts. (The background is known to a high precision because \texttt{wavdetect} determines it over a large area.) Additionally, the probability that any one source randomly overlaps with the known position of TYC 2597-735-1 within the 90\% PSF radius (0.28 arcmin for an energy of 1.5~keV and at the position of TYC 2597-735-1) is only 0.2\%. Thus, we regard this as a highly reliable detection of X-ray emission from TYC 2597-735-1, albeit with large uncertainties on flux and spectral properties due to the small number of counts.
 
 We do detect two other features that are both located just inside the ring of $H\alpha$, one of them is almost due North of TYC 2597-735-1, and the other one to the East (see Fig.~\ref{fig:chandraimage}. The feature to the East has $5\pm2.2$ counts with an estimated background of $1.01\pm0.01$ counts, while the one in the North has $8\pm2.8$ counts with a higher estimated background of $1.96\pm0.01$, because the PSF is wider. Again, the fact that both features are located at a physically meaningful position between the UV emission (white contour Fig.~\ref{fig:chandraimage}) and the bright H$\alpha$ ring (background image in Fig.~\ref{fig:chandraimage}) argues that these are not background fluctuations, but probably very weak sources that are physically associated with the outflow. However, the number of detected photons is low and only deeper X-ray observations will be able to unambiguously confirm these detections.
 
-Given the low number of counts and the size of the Chandra PSF that far away from the aimpoint, all three source are compatible with point sources, but could also be spatially extended by a few arcseconds. 
+Given the low number of counts and the size of the Chandra PSF that far away from the aimpoint, all three source are compatible with point sources, but we expect that the latter two sources are probably spatially extended just like the H$\alpha$ and the UV emission is. However, the low count number does not allow us to actually fit the source shape or extent, so we treat them like point sources below. 
 
+\subsection{Source properties}
+For all three regions, the detected soft photons are distributed over the observing time; we do not see strong clustering that would indicate a large flare, but given the low count numbers, variability with factors of a few cannot be excluded.
 
-\subsection{Spectral properties}
-We extract spectra for all three sources using circular extraction regions that encompass 90\% of the PSF at 1.5~keV at the location of the source. A background spectrum is extracted from a large region on the same chip, that is located outside of the UV contours shown in Fig~\ref{fig:chandraimage}.
+We extract spectra for all three sources using circular extraction regions that encompass 90\% of the PSF at 1.5~keV at the location of the source. A background spectrum is extracted from a large region on the same chip, that is located outside of the UV contours shown in Fig~\ref{fig:chandraimage}. We can describe this background as a flat 
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/TYC_spec.pdf}
+    \caption{}
+    \label{fig:chandraimage}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/combined.pdf}
+    \caption{}
+    \label{fig:chandraimage}
+\end{figure}
 
 \section{Discussion}  \label{sec:discussion}
 
