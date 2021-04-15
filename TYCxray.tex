@@ -271,7 +271,21 @@ We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4
 \end{figure*}
 
 \subsection{Source detection}
-Because of the large distance, we expect any source associated with TYC 2597-735-1 or its outflow to be absorbed, so we construct a narrow band image in the 1-2~keV range and run a source detection with the CIAO \texttt{wavdetect} task, which convolves the input image with a wavelet, taking the size of the PSF at that image location into account. We bin up the image such that it contains $2.6\times10^4$ pixels in Chandra's field-of-view and set the significant threshold such that we expect no more than one false detection in $10^5$~pixels. That way, any source detected by \texttt{wavdetect} is likely to be real. We find three sources, all of which coincide with UV/optical emission feature. All three sources have similar count rates and similar PSF sizes and thus similar positional uncertainties of about 2\arcsec{}.
+Because of the large distance, we expect any source associated with TYC 2597-735-1 or its outflow to be absorbed, so we construct a narrow band image in the 1-2~keV range and run a source detection with the CIAO \texttt{wavdetect} task, which convolves the input image with a wavelet, taking the size of the PSF at that image location into account. We bin up the image such that it contains $2.6\times10^4$ pixels in Chandra's field-of-view and set the significant threshold such that we expect no more than one false detection in $10^5$~pixels. That way, any source detected by \texttt{wavdetect} is likely to be real. We find three sources (table~\ref{tab:src}, all of which coincide with UV/optical emission feature. All three sources have similar count rates and similar PSF sizes and thus similar positional uncertainties of about 2\arcsec{}.
+\begin{table}
+\caption{Detected X-ray sources\label{tab:src}}
+\begin{tabular}{ccccccc}
+\hline \hline
+name & RA & DEC & $\sigma_\mathrm{RA}$ & $\sigma_\mathrm{DEC}$ & NET COUNTS & BKG COUNTS \\
+ &  &  & $\mathrm{{}^{\prime\prime}}$ & $\mathrm{{}^{\prime\prime}}$ & $\mathrm{ct}$ & $\mathrm{ct}$  \\
+\hline
+TYC 2597-735-1 & $16^\mathrm{h}48^\mathrm{m}38^\mathrm{s}$ & $2^\mathrm{h}20^\mathrm{m}49^\mathrm{s}$ & 3.2 & 2.0 & $7.5 \pm 3.0$ & $1.52 \pm 0.01$ \\
+X-East & $16^\mathrm{h}48^\mathrm{m}50^\mathrm{s}$ & $2^\mathrm{h}20^\mathrm{m}50^\mathrm{s}$ & 2.2 & 2.6 & $3.9 \pm 2.2$ & $1.08 \pm 0.01 $\\
+X-North & $16^\mathrm{h}48^\mathrm{m}35^\mathrm{s}$ & $2^\mathrm{h}21^\mathrm{m}02^\mathrm{s}$ & 2.8 & 3.2 & $6.0 \pm 2.8$ & $1.96 \pm 0.02$ \\
+\hline
+\end{tabular}
+\end{table}
+
 
 We detect a source at the location of TYC 2597-735-1 with (in our narrow band image) $9\pm3$ counts on a background of $1.52\pm0.01$ counts. (The background is known to a high precision because \texttt{wavdetect} determines it over a large area.) Additionally, the probability that any one source randomly overlaps with the known position of TYC 2597-735-1 within the 90\% PSF radius (0.28 arcmin for an energy of 1.5~keV and at the position of TYC 2597-735-1) is only 0.2\%. Thus, we regard this as a highly reliable detection of X-ray emission from TYC 2597-735-1, albeit with large uncertainties on flux and spectral properties due to the small number of counts.
 
@@ -282,23 +296,32 @@ Given the low number of counts and the size of the Chandra PSF that far away fro
 \subsection{Source properties}
 For all three regions, the detected soft photons are distributed over the observing time; we do not see strong clustering that would indicate a large flare, but given the low count numbers, variability with factors of a few cannot be excluded.
 
-We extract spectra for all three sources using circular extraction regions that encompass 90\% of the PSF at 1.5~keV at the location of the source. A background spectrum is extracted from a large region on the same chip, that is located outside of the UV contours shown in Fig~\ref{fig:chandraimage}. We can describe this background as a flat 
+For low count numbers, a formal spectral fit does not provide very reliable results; \citet{2010ApJ...708.1760G} instead provide a non-parametric method to estimate X-ray properties of a source based on the median energy. Their method is validated through extensive simulations and comparison with about 2000 faint stellar source observed with Chandra/ACIS; it essentially relies on the fact that photons in the hard band are not effected by the absorbing column density $N_\mathrm{H}$, so the median energy in the hard band can be used to estimate the plasma temperature. With that fixed, the soft band flux can provide an estimate of $N_\mathrm{H}$. Without hard flux, as in our case, there is a fundamental degeneracy the effects any parameter estimation method: A cool, but bright plasma with a high $N_\mathrm{H}$ produces a spectrum very similar to the spectrum emitted from a hotter, but less absorbed plasma.
 
+We use both the \citet{2010ApJ...708.1760G} method and spectral fitting to estimate the parameters of TYC 2597-735-1 and the two emitting regions located close to the H$\alpha$ ring, where we combine the spectra of the latter two regions, since the count number is very low and X-ray properties (see the color of the detected photons in Fig.~\ref{fig:chandraimage}) and location (between H$\alpha$ ring and UV emission) are very similar.
+
+We extract spectra for all three sources using circular extraction regions that encompass 90\% of the PSF at 1.5~keV at the location of the source. A background spectrum is extracted from a large region on the same chip, that is located outside of the UV contours shown in Fig~\ref{fig:chandraimage}. Below 7~keV, the background is well described by a flat component, except for a significant feature around 2.2~keV. Therefore, we exclude the regions 2.0-2.5~keV and $>7.0$~keV from fitting. We then simultaneously fit the source and background spectra using a modified Cash statistic \citep{1979ApJ...228..939C} as implemented in Sherpa\citep{2007ASPC..376..543D,doug_burke_2021_4428938}. To fit source emission, we use a model of an absorbed, collisionally-excited plasma \citep[APEC model][]{2012ApJ...756..128F} and add the flat background model, scaled for the different extraction regions. That way, we avoid subtracting the background and retain Poisson statistics. All fits are done on unbinned data, but the spectra are shown binned for display in Figs.~\ref{fig:TYC_spec} and \ref{fig:combined}.
+
+The spectrum for TYC 2597-735-1 is shown in Fig.~\ref{fig:TYC_spec}. We fit $N_\mathrm{H}=(6\pm5)\times10^{21}$~cm$^{-2}$ and a plasma temperature in the range .1-1.5~keV, where the low end of the range requires very large values of $N_\mathrm{H}$ and emission measure. For temperatures around 1~keV, common for stellar sources, the unabsorbed flux is of order $10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $3\times 10^{30}$~erg~s$^{-1}$ with uncertainties of a factor a few. The non-parametric method finds $N_\mathrm{H}$ around $1\times10^{22}$~cm$^{-2}$ and points to a stellar model wiht an instrinsic plasma temperature of 0.8~keV, leading to similar total fluxes.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/TYC_spec.pdf}
     \caption{}
-    \label{fig:chandraimage}
+    \label{fig:TYC_spec}
 \end{figure}
 
+The combined spectrum for the other two emission regions is shown in Fig.~\ref{fig:combined}. We fit $N_\mathrm{H}=(1.3_{-0.6}^{+2})\times10^{22}$~cm$^{-2}$ and a plasma temperature of $0.5_{-0.3}^{+\infty}$~keV. For temperatures around 0.5~keV, which we will argue are physically reasonable in Sect~\ref{sec:outflow}, the unabsorbed flux is of order $3 \times 10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $10^{31}$~erg~s$^{-1}$ with uncertainties of a factor a few. We do not apply the non-parametric method, since this is not a stellar source.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/combined.pdf}
     \caption{}
-    \label{fig:chandraimage}
+    \label{fig:combined}
 \end{figure}
 
 \section{Discussion}  \label{sec:discussion}
+\subsection{TYC 2597-735-1}
+
+\subsection{Outflow} \label{sec:outflow}
 
 \begin{acknowledgements}
 This research has made use of data obtained from the Chandra Data Archive and the Chandra Source Catalog, and software provided by the Chandra X-ray Center (CXC) in the application packages CIAO and Sherpa. 
