@@ -1,11 +1,14 @@
 % Tasks: 
 % Put in estimate of galactic NH (Moritz)
 % Dickey and Lockman, 1990, Annu. Rev. Astron. Astrophys., 28, 215
-% get: 1.73 e20 - maybe plot second model with nh fixed?
-% Get TESS lightcurve to check for variability (Moritz)
+% get: 1.73 e20 - maybe plot second model with nh fixed? - plot done, but not yet included
+% Get TESS lightcurve to check for variability (MMax)
 % Is a jet reasonable (eqn 6) (Moritz to put some numbers in)
 % Arcus simulations (Moritz)
 % Check if X-East and X-West coincide with GAIA sources (i.e. they are foreground stars) - good hint from Christian (Moritz) - done. No GAIA DR2 or 2MASS sources are close to X-East and X-North.
+% Consolidate discussion on shock physics - mostly done
+% discuss variability and magnetic field
+% plot of L_X / L_bol for some classes of objects. What's the other axis? rosby number? Age? Period?
 
 
 
@@ -247,7 +250,7 @@ One key stellar behavioral shift that may rise as a result of a stellar merger i
 
 \citet{Soker&Tylenda2007} suggest the strongest magnetic activity tied to a stellar merger's revitalized dynamo may last centuries. Recent suspected stellar mergers (like red luminous novae) are obscured from view by outflows ejected during the merger event itself (e.g., \citealt{Bond+2003, Tylenda+2016}). TYC 2597-735-1 shows evidence that it harbors a persisting, strong magnetic field \citep[e.g., H$\alpha$ emission and variability, radial velocity shifts strongly correlated with the Ca II IRT stellar atmospheric features][]{2020Natur.587..387H}. One way to test whether its hypothetical magnetic field exists is to look for signs of X-ray emission at TYC 2597-735-1 and compare its luminosity to the remnant's bolometric luminosity \citep{Soker&Tylenda2007}.
 
-TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring Nebula'' (BRN; \citealt{2020Natur.587..387H}), were partially observed by chance with Chandra over a decade ago. Here, we report the findings of this serendipitous \emph{Chandra} observation and present a new \emph{TESS} lightcurve. We explore whether the X-ray emission observed at TYC 2597-735-1 is consistent with dynamo-driven magnetic field activity or other sources near the star. We summarize the stellar properties of TYC 2597-735-1 in Section~\ref{sec:properties}}. In Section~\ref{sec:data}, we describe the observations, the source detection methods implemented to retrieve X-ray signal from regions in the BRN and around TYC 2597-735-1 and the X-ray properties of these regions. In Section~\ref{sec:discussion}, we explore different physical mechanisms that may explain the X-ray luminosity and spectral characteristics observed for TYC 2597-735-1 and place physical limits on the properties of the BRN shock region from its X-ray diagnostics. We conclude in Section~\ref{sec:summary} with a summary and describe prospects for future observations. 
+TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring Nebula'' (BRN; \citealt{2020Natur.587..387H}), were partially observed by chance with Chandra over a decade ago. Here, we report the findings of this serendipitous \emph{Chandra} observation and present a new \emph{TESS} lightcurve. We explore whether the X-ray emission observed at TYC 2597-735-1 is consistent with dynamo-driven magnetic field activity or other sources near the star. We summarize the stellar properties of TYC 2597-735-1 in Section~\ref{sec:properties}. In Section~\ref{sec:data}, we describe the observations, the source detection methods implemented to retrieve X-ray signal from regions in the BRN and around TYC 2597-735-1 and the X-ray properties of these regions. In Section~\ref{sec:discussion}, we explore different physical mechanisms that may explain the X-ray luminosity and spectral characteristics observed for TYC 2597-735-1 and place physical limits on the properties of the BRN shock region from its X-ray diagnostics. We conclude in Section~\ref{sec:summary} with a summary and describe prospects for future observations. 
 
 
 
@@ -268,6 +271,7 @@ parameter & symbol & value \\
 distance & $d$ & $1.9 \pm 0.1$ kpc\\
 luminosity & $L_\mathrm{bol}$ & $110 \;L_\sun{}$\\
 radius & $R_*$ & $11\;R_\sun{}$\\
+mass & $M_*$ & $1-2.1\;M_\sun{}$\\
 temperature & $T_\mathrm{eff}$ & 5850 K\\
 surface gravity & $g$ & 600 cm s$^{-2}$\\
 rotational broadening & $v \sin i$ & 6.5 km s$^{-1}$\\
@@ -278,14 +282,10 @@ time since merger & & 1000-5000 yr\\
 \end{tabular}
 \end{table}
 
-\cite{2020Natur.587..387H} present imaging and spectroscopic information for TYC 2597-735-1 and derive stellar properties, which we summarize in table~\ref{tab:TYC}. They detect several signs of stellar activity, including variable H$\alpha$ emission line profiles and a radial-velocity (RV)  variations with a period around 13.7~days; \cite{2020Natur.587..387H} argue that line profiles and the parameter space for a potential companion favor an interpretation of the RV data as caused by stellar activity, potentially in the polar regions.
+\cite{2020Natur.587..387H} present imaging and spectroscopic information for TYC 2597-735-1 and derive stellar properties, which we summarize in table~\ref{tab:parameters}. They detect several signs of stellar activity, including variable H$\alpha$ emission line profiles and a radial-velocity (RV)  variations with a period around 13.7~days; \cite{2020Natur.587..387H} argue that line profiles and the parameter space for a potential companion favor an interpretation of the RV data as caused by stellar activity, potentially in the polar regions.
 
 \cite{2020Natur.587..387H} interpret the combination of the bright BRN and the unusual stellar parameters in a stellar merger scenario, where a low-mass ($0.1\;\mathrm{M}_\sun$), short-period companion merged with the primary star a few thousand years ago. In the process of that merger, a circumstellar disk with an inner radius of 0.1~au was formed. Today, material from that disk is accreting onto the central star. The merger also caused the ejection of a conical outflow moving around 400~km~s$^{-1}$. Our line-of-sight is close to the axis of the outflow and we see the approaching and receeding flows projected onto the sky as the rings of the BRN.
 
-
-
-
-Text for TESS Secton Hoadley 2020 noticed a scatter significantly larger than the formal uncertainties of B band observations taken between 2015 and 2019, but attributed this to systematic calibration problems. However, wit hthe TESS lightcurve, we can now reasses aad think those are real.  and also high point in the 1970s
 
 \section{Data analysis} \label{sec:data}
 \subsection{Data reduction}
@@ -323,7 +323,7 @@ We do detect two other features that are both located just inside the ring of H$
 
 Given the low number of counts and the size of the Chandra PSF that far away from the aimpoint, all three sources are compatible with point sources, but we expect that the latter two sources are probably spatially extended just like the H$\alpha$ and the UV emission is. However, the low count number does not allow us to actually fit the source shape or extent, so we treat them like point sources below. 
 
-We also search for extended emission on larger scales that coincide with either the FUV emission (using a region bounded by the white contours  in Fig.~\ref{fig:chandraimage}) or a region FUV and H$\alpha$, i.e.\ a ring on the outside of the white contour in Fig.~\ref{fig:chandraimage} that contains the sources labelled ``X-North'' and ``X-East''. The latter might be a sign of a shocked, X-ray emitting region in front of the FUV emission. However, we do not know a-priory which level of contour lines might be correlated, so the selection of the region is somewhat arbitrary. We do not see significantly enhanced emission --except for the three point-like sources discussed above-- compared to a background region on the northern half of the chip. To obtain an order-of-magnitude estimate how bright an extended source would have to be for a secure detection, we take the $3\sigma$ uncertainty of the observed background flux (about $10^{-5}$~counts~s$^{-1}$~arcsec$^{-2}$) in the same 1-2~keV energy range as for the source detection above and convert that the number into an energy flux per surface area in the plane of the sky. We find that emission would have to be stronger than a few times $10^{31}$~erg~s${-1}$~pc$^{-2}$ in this band to be detected significantly above the background.
+We also search for extended emission on larger scales that coincide with either the FUV emission (using a region bounded by the white contours  in Fig.~\ref{fig:chandraimage}) or a region FUV and H$\alpha$, i.e.\ a ring on the outside of the white contour in Fig.~\ref{fig:chandraimage} that contains the sources labelled ``X-North'' and ``X-East''. The latter might be a sign of a shocked, X-ray emitting region in front of the FUV emission. However, we do not know a-priory which level of contour lines might be correlated, so the selection of the region is somewhat arbitrary. We do not see significantly enhanced emission --except for the three point-like sources discussed above-- compared to a background region on the northern half of the chip. To obtain an order-of-magnitude estimate how bright an extended source would have to be for a secure detection, we take the $3\sigma$ uncertainty of the observed background flux (about $10^{-5}$~counts~s$^{-1}$~arcsec$^{-2}$) in the same 1-2~keV energy range as for the source detection above and convert that the number into an energy flux per surface area in the plane of the sky. We find that emission would have to be stronger than a few times $10^{31}$~erg~s$^{-1}$~pc$^{-2}$ in this band to be detected significantly above the background.
 
 \subsection{Source properties}
 For all three regions, the detected soft photons are distributed over the observing time; we do not see strong clustering that would indicate a large flare, but given the low count numbers, variability with factors of a few cannot be excluded.
@@ -372,11 +372,81 @@ However, the similarity of the expected stellar rotation period and the TESS orb
     \label{fig:TESS_light_curve}}
 \end{figure}
 
+\cite{2020Natur.587..387H} noticed an RMS scatter around 0.008~mag --significantly larger than the formal uncertainties-- between runs of ground-based $B$ band observations between 2015 and 2019. They attributed this to systematic calibration uncertainties. However, given the variability in the TESS lightcurve on a similar level, this might instead be a signature of stellar activity.
+
+TBD: Get level of activity in B band for similar stars? Maybe in dicussion?
 
 
 \section{Discussion}  \label{sec:discussion}
+Most X-rays from stellar sources originate from optically thin, collisionally excited gas with temperatures of a few MK. The gas can either the heated by magnetic reconnection as in the solar corona, or in shocks (accretion shocks or shocks in winds or jets). Unless the density is very low ($<10^5$~cm$^{-3}$ or so), we can assume that the plasma is in an equilibrium ionization state \citep[see, e.g. the accretion shock simulations in ][]{2007A&A...466.1111G}.
+
+\subsection{X-rays from shocks}
+Shocks convert bulk kinetic energy into thermal energy. Possible scenarios here are an accretion shock where material falls from the disk onto the star with close to free-fall velocity, or shocks in outflows. The latter might be seen in different locations: When the outflow runs into the (almost) stationary ISM (forward-shock), the front of the outflowing material is decelerated, which also causes a reverse shock. Last, changes of the outflow velocity over time can lead to internal working surfaces that travel along the flow as faster material catches up with previous slower ejecta. 
+
+Assume material of pre-shock density $n_{\rm pre}$ is moving with velocity $v_{\rm pre}$ into a stationary external medium (the ISM in the case of an outflow termination shock or the stellar photosphere in the case of an accretion shock) of particle density $n_{\rm ext}$.  The velocity of the forward shock in the lab frame is given by the shock jump conditions (for adiabatic index $\gamma = 5/3$),
+\be
+v_{\rm fsh} = \frac{4}{3}v_{\rm psh}, \label{eqn:vsh1}
+\ee
+where $v_{\rm psh}$ is the velocity of the post-shock gas.  The reverse shock velocity (also in the lab frame) is given by
+\be
+v_{\rm rsh} \simeq \frac{4}{3}v_{\rm psh} - \frac{v_{\rm ej}}{3}
+\label{eqn:vsh2}
+\ee
+
+From the jump conditions, the shocks will heat gas to a temperature
+\be
+kT_{\rm sh} \simeq \frac{3}{16}\mu m_p v_{\rm sh}^{2} \approx 0.3\,{\rm keV}\left(\frac{v_{\rm sh}}{500\,{\rm km/s}}\right)^{2},
+\label{eqn:Tshock}
+\ee
+where we have taken $\mu \simeq 0.62$ for fully ionized solar composition gas.  Here $v_{\rm sh}$ is the shock velocity relative to the upstream rest frame. 
+
 \subsection{TYC 2597-735-1}
 There are a variety of physical mechanisms that may be responsible for the X-ray emission observed at TYC 2597-735-1. The point of interest is that TYC 2597-735-1 is strongly suspected of undergoing a merger event with a smaller, $\sim$0.1 M$_{\odot}$ companion $\lesssim$5,000 years ago \citep{2020Natur.587..387H}. Such a collision and subsequent engulfment of a stellar companion would disrupt the equilibrium state of the surviving star, potentially leading to enlarged surface convective zone regions (e.g., \citealt{}), accretion flows from surrounding circumstellar material that continue to disturb the star's outermost surface regions (e.g., \citealt{}), and sustained outflows that continue to eject material from the system (e.g., \citealt{Zuckerman+2008}). Here, we explore different mechanisms that may be responsible for the X-ray emission observed at TYC 2597-735-1.
+
+
+\subsubsection{X-rays from Accretion Shocks onto TYC 2597-735-1}
+
+Current observations suggest TYC 2597-735-1 harbors a substantial circumstellar disk, which may have an inner rim as close as $\sim$0.1 AU \citep{2020Natur.587..387H}. Much like planet-forming accretion disks, complex interactions between these disks and stars via magnetospheric accretion can lead to matter falling onto the star, potentially generating X-rays at free-fall shock regions \citep[e.g.]{2007A&A...466.1111G}. Here, we explore whether this accretion shock near TYC 2597-735-1 provides the right conditions to generate the observed $L_{\rm X}$ and subsequent 1-2 keV photons.
+
+With the stellar parameters from table~\ref{tab:parameters} we calculate the free fall velocity of material onto TYC 2597-735-1 as
+\begin{equation}
+    v_{\rm ff} = \left( \frac{2 G M_{\star}}{R_{\star}} \right)^{1/2} \left( 1 - \frac{R_{\star}}{R_{\rm M}} \right)^{1/2} \approx 280 \left( \frac{M_{\star}}{0.5 M_{\odot}} \right)^{1/2} \left( \frac{R_{\star}}{2 R_{\odot}} \right)^{-1/2} km/s,
+\end{equation}
+or $v_{\rm ff} \lesssim$ 260 km/s. At this free fall velocity, the temperature of the shocked material according to eqn~\ref{eqn:Tshock} is $\lesssim$ 775,000 K -- too low to explained the observed X-ray flux.
+Instead, the accretion shock should peak in luminosity in the EUV ($\sim$180 - 280 {\AA}) where the total shock luminosity is expected to be a small fraction of $L_{\star}$:
+\begin{equation}
+    L_{\rm sh} = \frac{1}{2} \dot{M} v_{\rm ff}^{2} \approx 3.5 \times 10^{-3} L_{\odot},
+\end{equation}
+or $L_{\rm sh}/L_{\rm bol} <$ 3$\times$10$^{-5}$.
+
+\subsubsection{Shocks at the base of the outflow}
+In the young star DG~Tau, X-rays have been observed at the base of the outflow \citep{2008A&A...488L..13S} possibly related to the launching or collimation \citep[e.g.]{2014ApJ...795...51G,2018A&A...615A.124U}. In DG~Tau, the soft X-ray emission is offset by about 40~au, but given the source location offset from \emph{Chandra}'s optical axis, the distance of TYC 2597-735-1, and the viewing geometry where the outflow axis is close to the line-of-sight, we do not expect a positional offset here. 
+
+If we assume that a fraction $\eta_{\rm j} \sim 10\%$ of the accreted matter is launched into a bipolar collimated outflow (``jet'') with an outflow velocity $v_{\rm j}$ some multiple $\sim 3$ of the surface escape speed of TYC, $\approx (GM_{\star}/R_{\star})^{1/2} \approx 160$ km s$^{-1}$, then the present-day jet power is given by
+\be
+L_{\rm j} \approx \frac{1}{2}\eta_{\rm j}\dot{M}_{\star}v_{\rm j}^{2} \approx 5\times 10^{32}\,{\rm erg\,s^{-1}}\,\left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm w}}{400\,{\rm km\,s^{-1}}}\right)^{2},
+\label{eqn:jetpower}
+\ee
+This is in principle sufficient to explain the X-ray point source overlapping TYC, $L_{\rm X} \sim 10^{31}$ erg s$^{-1}$. To match the temperature of the X-rays, we need internal shocks of order 500~km~s$^{-1}$ (eqn.~\ref{eqn:Tshock})
+for instance as a result of the wind velocity increasing with time due to the radial contraction of TYC (and hence increase of the escape speed from the inner edge of the accretion disk) as the star undergoes thermal-timescale contraction following the merger \citep[][extended Figure 7]{2020Natur.587..387H}. In young stars, outflows often have different velocity components, where only the fastest and innermost components shock to produce X-rays, while most of the mass in seen in slower components. For example, in DG~Tau, the measured velocity in the UV is similar to the outflow velocity of the BRN. However, such a scenario would require an unreasonably large mass-loss, since eqn.~\ref{eqn:jetpower} already requires that 10\% of the total accretion rate shocks to produce X-rays. The entire outflow would have to be accelerated to $\sim 900$~km~s$^{-1}$ (several times the escape speed), and pass through a shock front with $\Delta v=500$~km~s$^{-1}$, to produce sufficient luminosity at X-ray emitting temperatures and continue the outflow with the velocity of $\sim 400$~km~s$^{-1}$ observed in the BRN. We cannot rule out this scenario, but the high launching speed and the fact that it does not explain the variability in the TESS and RV lightcurves make it unlikely that shock at the base of the outflow are the main component of the observed X-ray emission.
+
+
+\textcolor{blue}{HMG: I'm not convinced that the scenario above is realistic. The entire mass outflow would have to be 900 km/s fast (500 for the shock and 400 because we see flow velocity in the BRN after). Thus, I commented out Brian's section on N\_H for such a scenario. We can bring it back in, if you disagree!}
+%If the jet is conical in shape and subtends a fraction $f_{\Omega} < 1$ of the total $4\pi$ solid angle, then the radial density profile of the jet is approximately given by
+%\begin{eqnarray}
+%n_{\rm j} &\approx& \frac{\eta_{\rm j}\dot{M}_{\star}}{4\pi f_{\Omega}m_p v_{\rm j} r^{2}} \nonumber \\
+%&\approx& 8\times 10^{-4}\,{\rm cm^{-2}}\left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{f_{\Omega}}{0.1}\right)^{-1}\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm j}}{400\,{\rm km\,s^{-1}}}\right)^{-1}\left(\frac{r}{1\,{\rm pc}}\right)^{-2},
+%\end{eqnarray}
+%while the column density external to some radius $r$ is given by
+%\begin{eqnarray}
+%N_{\rm H} \approx \int_{r}^{\infty} n_{\rm j}dr &=& \frac{\eta_{\rm j}\dot{M}_{\star}}{4\pi f_{\Omega}m_p v_{\rm j} r} \nonumber \\
+% &\approx& 2\times 10^{15}\,{\rm cm^{-2}} \left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{f_{\Omega}}{0.1}\right)^{-1}\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm j}}{400\,{\rm km\,s^{-1}}}\right)^{-1}\left(\frac{r}{1\,{\rm pc}}\right)^{-1},
+%\label{eq:NHjet}
+%\end{eqnarray}
+%where $m_p$ is the proton mass and we have normalized $r$ to a maximum radius corresponding to outer extent of the BRN. 
+
+%Equation (\ref{eq:NHjet}) shows that, in principle, jetted X-ray emission could originate from radii as small as $\sim 10^{-6}$ pc (corresponding to $\sim 10^{-4}$ arcsec projected angular offset from TYC) and not overproduce the $N_{\rm H} \approx 10^{21}-10^{22}$ cm$^{-1}$ values of the X-ray source.  At this radius, the density could be as high as $n_{\rm j}(10^{-4}{\rm pc}) \sim 10^{7}{\rm cm^{-3}},$ more than sufficient for any shocks in the outflow to be radiative (i.e., to cool through UV/X-ray emission faster than the radial expansion time) and hence to tap into a sizable fraction of the jet power, $L_{\rm j}$, to power the observed X-ray emission.
+
 
 \subsubsection{Star Dynamo Generated X-rays}
 % From emails:
@@ -427,72 +497,22 @@ The predicted X-ray luminosity from the dynamo is (e.g., Soker \& Tylenda 2007)
 Thus, taking $L_{\rm bol} = 100L_{\odot}$ for TYC and ${\rm Ro} = 4$, we find that explaining the measured $L_{\rm X} \sim 6\times 10^{30}$ erg s$^{-1}$ requires $C_{\rm x} \sim 2\times 10^{-4}$ for TYC....  This activity level is a factor $\sim 10$ and $\sim 100$ higher than for main sequence (Pizzolato et al. 2003) and giant stars (Gondoin 2005), respectively.  The level of X-ray activity {\it might} be consistent with YSOs, which can achieve ratios $L_{\rm X}/L_{\rm bol}$ up to a factor of 30 times higher than for main sequence stars (Preibisch et al. 2005; see their Fig. 10), possibly as a result of the accretion disk present in these systems (absent in main sequence or ordinary giant stars, but present around TYC...).
 
 
+\subsection{Large scale outflow}
+We now place limits on the properties of the outflow and the BRN using the upper limit for large-scale X-ray emission coincident with the FUV emission and our detection of the point-like sources X-East and X-North.
 
-\subsubsection{X-rays from Accretion Shocks onto TYC 2597-735-1}
+Assume the BRN ejecta of density $n_{\rm BRN}$ is expanding at $v_{\rm ej} \simeq 400$ km/s into a stationary external medium of particle density $n_{\rm ism}$.  In the limit that the shocked gas is still moving out with the same velocity as the BRN, we get  $v_{\rm psh} \simeq v_{\rm ej}$, $v_{\rm fsh} \simeq (4/3)v_{\rm ej}$, and $v_{\rm rsh} \simeq v_{\rm ej}$ (i.e.\ the reverse shock is not yet making much progress moving back through the ejecta), using eqns~\ref{eqn:vsh1} and \ref{eqn:vsh2}.  However, if, as we expect in the BRN from the bright UV emission, the shock has already swept up considerable gas from the external medium and begun to decelerate, then $v_{\rm fsh} \ll v_{\rm ej}$ and $v_{\rm rsh} \simeq -v_{\rm ej}/3$.
 
-Current observations suggest TYC 2597-735-1 harbors a substantial circumstellar disk, which may have an inner rim as close as $\sim$0.1 AU \citep{2020Natur.587..387H}. Much like planet-forming accretion disks, complex interactions between these disks and stars via magnetospheric accretion can lead to matter falling onto the star, potentially generating X-rays at free-fall shock regions \citep[e.g.]{2007A&A...466.1111G}. Here, we explore whether this accretion shock near TYC 2597-735-1 provides the right conditions to generate the observed $L_{\rm X}$ and subsequent 1-2 keV photons.
-
-We follow the formulation of the expected accretion shock characteristics of a magnetically driven accretion column presented in \citet{2007A&A...466.1111G }. TYC 2597-735-1 has a reported mass $M_{\star} \approx$ 1.5 - 2 $M_{\odot}$, radius $R_{\star} \approx$ 10 $R_{\odot}$, luminosity $L_{\star} \approx$ 100 $L_{\odot}$, and mass accretion rate $\dot{M} \approx$ 10$^{-7} M{\odot}/{\rm yr}$. The free fall velocity of material onto TYC 2597-735-1 is 
-\begin{equation}
-    v_{\rm ff} = \left( \frac{2 G M_{\star}}{R_{\star}} \right)^{1/2} \left( 1 - \frac{R_{\star}}{R_{\rm M}} \right)^{1/2} \approx 280 \left( \frac{M_{\star}}{0.5 M_{\odot}} \right)^{1/2} \left( \frac{R_{\star}}{2 R_{\odot}} \right)^{-1/2} km/s,
-\end{equation}
-or $v_{\rm ff} \lesssim$ 260 km/s \citep{2020Natur.587..387H}. At this free fall velocity, the temperature of the shocked material as it accretes onto the denser stellar atmosphere is  
-\begin{equation}
-    T_{\rm sh} = \frac{3}{16} \left( \frac{\mu m_{\rm H}}{k_{B}} \right) v_{\rm ff}^{2} \approx 8.85 \times 10^{5} \left( \frac{M_{\star}}{0.5 M_{\odot}} \right) \left( \frac{R_{\star}}{2 R_{\odot}} \right)^{-1} K,
-\end{equation}
-or $T_{\rm sh} \lesssim$ 775,000 K -- too low to explained the observed X-ray flux.
-Instead, the accretion shock should peak in luminosity in the EUV ($\sim$180 - 280 {\AA}) where the total shock luminosity is expected to be a small fraction of $L_{\star}$:
-\begin{equation}
-    L_{\rm sh} = \frac{1}{2} \dot{M} v_{\rm ff}^{2} \approx 3.5 \times 10^{-3} L_{\odot},
-\end{equation}
-or $L_{\rm sh}/L_{\rm bol} <$ 3$\times$10$^{-5}$.
+$v_{\rm sh}$ in eqn.~\ref{eqn:Tshock} is the shock velocity relative to the upstream rest frame (i.e. $v_{\rm sh} \simeq v_{\rm fsh}$ in the case of the forward shock with stationary upstream, but $v_{\rm sh} \simeq v_{\rm ej}-v_{\rm rsh}$ in the reverse shock).  From the above, we expect the reverse shock will be strongest, with $v_{\rm sh} \simeq (4/3)v_{\rm ej} \approx 500$ km/s.
 
 
-\subsection{X-rays from Internal Shocks Within an Accretion-Powered Jet}
-
-The present day accretion rate onto TYC was estimated from its $H\alpha$ luminosity to be $\dot{M}_{\star} \sim 1.5\times 10^{-7}M_{\odot}$ yr$^{-1}$ \citep{2020Natur.587..387H}.  If we assume that a fraction $\eta_{\rm j} \sim 10\%$ of the accreted matter is launched into a bipolar collimated outflow (``jet'') with an outflow velocity $v_{\rm j}$ some multiple $\sim 3$ of the surface escape speed of TYC, $\approx (GM_{\star}/R_{\star})^{1/2} \approx 160$ km s$^{-1}$, then the present-day jet power is given by
-\be
-L_{\rm j} \approx \frac{1}{2}\eta_{\rm j}\dot{M}_{\star}v_{\rm j}^{2} \approx 5\times 10^{32}\,{\rm erg\,s^{-1}}\,\left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm w}}{400\,{\rm km\,s^{-1}}}\right)^{2},
-\ee
-This is in principle sufficient to explain the X-ray point source overlapping TYC, $L_{\rm X} \sim 10^{31}$ erg s$^{-1}$.  This energy could be extracted through internal shocks, for instance as a result of the wind velocity increasing with time due to the radial contraction of TYC (and hence increase of the escape speed from the inner edge of the accretion disk) as the star undergoes thermal-timescale contraction following the merger (see Hoadley+20, extended Figure 7).  
-
-If the jet is conical in shape and subtends a fraction $f_{\Omega} < 1$ of the total $4\pi$ solid angle, then the radial density profile of the jet is approximately given by
-\begin{eqnarray}
-n_{\rm j} &\approx& \frac{\eta_{\rm j}\dot{M}_{\star}}{4\pi f_{\Omega}m_p v_{\rm j} r^{2}} \nonumber \\
-&\approx& 8\times 10^{-4}\,{\rm cm^{-2}}\left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{f_{\Omega}}{0.1}\right)^{-1}\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm j}}{400\,{\rm km\,s^{-1}}}\right)^{-1}\left(\frac{r}{1\,{\rm pc}}\right)^{-2},
-\end{eqnarray}
-while the column density external to some radius $r$ is given by
-\begin{eqnarray}
-N_{\rm H} \approx \int_{r}^{\infty} n_{\rm j}dr &=& \frac{\eta_{\rm j}\dot{M}_{\star}}{4\pi f_{\Omega}m_p v_{\rm j} r} \nonumber \\
- &\approx& 2\times 10^{15}\,{\rm cm^{-2}} \left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{f_{\Omega}}{0.1}\right)^{-1}\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm j}}{400\,{\rm km\,s^{-1}}}\right)^{-1}\left(\frac{r}{1\,{\rm pc}}\right)^{-1},
-\label{eq:NHjet}
-\end{eqnarray}
-where $m_p$ is the proton mass and we have normalized $r$ to a maximum radius corresponding to outer extent of the BRN. 
-
-Equation (\ref{eq:NHjet}) shows that, in principle, jetted X-ray emission could originate from radii as small as $\sim 10^{-6}$ pc (corresponding to $\sim 10^{-4}$'' projected angular offset from TYC) and not overproduce the $N_{\rm H} \approx 10^{21}-10^{22}$ cm$^{-1}$ values of the X-ray source.  At this radius, the density could be as high as $n_{\rm j}(10^{-4}{\rm pc}) \sim 10^{7}{\rm cm^{-3}},$ more than sufficient for any shocks in the outflow to be radiative (i.e., to cool through UV/X-ray emission faster than the radial expansion time) and hence to tap into a sizable fraction of the jet power, $L_{\rm j}$, to power the observed X-ray emission.
-
-
-
-\subsection{Outflow} \label{sec:outflow}
-Shock in outflows have been observed in X-ray sources of different evolutionary stage because kinematic energy can be converted into heat in a shock front (Some references either here or in introduction).
-Using the strong shock conditions we can transform the thermal energy
-k$T$, where k is Boltzmann's constant and $T$ is the temperature, into
-the pre-shock velocity in the shock rest frame $v_{\mathrm{shock}}$:
-\begin{equation} 
-\left(\frac{v_{\mathrm{shock}}}{500\textnormal{ km s}^{-1}}\right)^2 \approx 
-\frac{\textnormal{k}T}{0.33\textnormal{ keV}} \; .
-\label{vkt} 
-\end{equation}
-For a travelling shock wave, the pre-shock gas velocity is the sum of $v_{\mathrm{shock}}$ and the motion of the shock front.
-
-Given uncertainty on the fitted value, the observed X-ray temperature if fully consistent with outflow velocities of a few hundred km~s$^{-1}$, that can be deduced from the optical and UV data \citep{2020Natur.587..387H}. The location of the X-ray emission seems to fall slightly inside of the H$\alpha$ emission, but outside of the brightest UV emission (Fig.~\ref{fig:chandraimage}). The interpretation is complicated by the fact that see we both the receding and approaching outflow superimposed on the sky \citep{2020Natur.587..387H}.
-
-\emph{HMG: Could be a shock in front of the UV, as in heated to X-ray temperature and then cools to UV, could be a reverse shock behind halpha}.
+\subsubsection{Sources X-East and X-North}
+The sources X-East and X-North are compatible with point sources. Given the size of the PSF, we use 1~arcsec ($d_\mathrm{sh}=1900$~au at the distance of TYC 2597-735-1) as upper limit of the source size and 500~km~s$^{-1}$ as the shock velocity for the ejecta, compatible with the observed X-ray spectrum.
 
 \citet{2002ApJ...576L.149R} provide a
-semi-analytical formula for the cooling length  %ttps://www.overleaf.com/project/60759e03baf23924f281eec9h
+semi-analytical formula for the cooling length  
 $d_{\mathrm{cool}}$ of gas
-heated in fast shocks ($\Delta v \ga 200$ km/s) which we can rewrite as:
+heated in fast shocks ($\Delta v \ga 200$ km/s) caused by ramming into an obstacle
+which we can rewrite as:
 \begin{equation}
 d_{\mathrm{cool}} \approx 20.9 \mathrm{ AU} 
     \left(\frac{10^5\mathrm{ cm}^{-3}}{n_0}\right) 
@@ -501,54 +521,20 @@ d_{\mathrm{cool}} \approx 20.9 \mathrm{ AU}
 \end{equation}
 where $n_0$ is the pre-shock particle number density, equal to a
 quarter of the post-shock number density $n$ in the strong shock
-approximation.  
+approximation.
+Since $d_{\mathrm{cool}}$ is much smaller than the size scale of the outflow we can neglect spherical expansion over the thickness of the shock.
+To fit such a shock into 1900~au, the density must be $>10^3\mathrm{ cm}^{-3}$. The emission spectra calculated by \citet{2002ApJ...576L.149R} include both continuum and line emission in the X-ray band. According to their equations 8 and 9, a non-radiative shock with $n_0=10^3\mathrm{ cm}^{-3}$ and a diameter equal to the size of the PSF emits just enough flux to explain the X-ray emission from either X-North or X-East. Such a shock would have a mass flux of $\dot M = \mu m_\mathrm{p} n_0 v_\mathrm{sh} \pi (d_\mathrm{sh}/2)^2 \sim 10^{-8}\;M_\sun\;\mathrm{yr}^{-1}$.
+Should the densities by higher, both the cooling length and the volume of the shock would be smaller, but the mass flux stays unchanged. 
 
-Assuming that $d_{\mathrm{cool}}$ is much smaller than the size scale of the outflow we can neglect spherical expansion over the thickness of the shock. 
-The
-mass flow rate $\dot M_{\rm shock}$ through the shock front with
-  area $A$ is then given by
-\begin{eqnarray}
-\label{eqn_mdot1}
-\dot M_{\rm shock} & = & Av_{\mathrm{shock}}\rho_0,
-\end{eqnarray}
-where $\rho_0=\mu m_{\mathrm{H}}n_{\mathrm{ion}_0}$ is the pre-shock mass density
-of the flow, $n_{\mathrm{ion}_0}$ is the initial number density of heavy particles, i.e. atoms and ions, $\mu$ the mean relative ion particle weight, and
-$m_{\mathrm{H}}$ the mass of hydrogen. Assuming solar abundances, we adopt
-$\mu=1.26$.  It is worth noting that $\dot M_{\rm shock}$ is less than the
-  total mass loss rate in the flow, since $v_{\mathrm{shock}}$ is
-  measured in the rest frame of the shock, and shocks in these systems
-  are observed to travel at speeds of tens to hundreds of km~s$^{-1}$.
+\citet{2020Natur.587..387H} estimate the total mass (of neutral hydrogen) of the BRN to $<0.008\;M_\sun{}$. If the mass of the BRN was ejected over the course of 1000~yr, the mass flux is $10^{-5}\;M_\sun\;\mathrm{yr}^{-1}$. The two regions X-North and X-East together cover only a small fraction of the total area of the BRN (Fig.~\ref{fig:chandraimage}), but it is conceivable that 0.1\% of the total mass flux of the BRN outflow is concentrated at these locations. In order to generate X-rays here but not in other parts of the BRN, some special condition must trigger a stronger shock here, such as a pre-existing clump in the ISM which serves as obstacle for the shock. X-North and X-East are located just on the outside of the FUV emission on the ring of the H$\alpha$ line, so the ISM may be be cleared in these locations yet. Similarly, the initial outflow could be clumpy and inhomogeneous in density and velocity and X-North and X-East represent two locations where such dense clumps are colliding; if that is the case, then X-ray sources may flicker on and off all around the ring over a time scale of $<20$~yr (gas at 500~km~s$^{-1}$ needs 20 years to pass through a cooling zone of $d_{\mathrm{cool}}=2000$~au). This hypothesis is testable with new observations!
+The H$\alpha$ emission ring also shows some clumpiness on the outside of the BRN. On the other hand, the UV emission from the BRN itself is remarkably smooth, even when taking into account the larger PSF of \emph{GALEX} ($FWHM \sim 5$~arcsec) compared to the H$\alpha$ observations.
 
-The area of the shock can be determined from
-\begin{eqnarray}
-\label{eqn_area}
-A = \pi R^2 = {\mathrm{Volume} \over d_{\mathrm{cool}}} = 
-    {VEM \over n_{\mathrm{e}} n_{\mathrm{ion}} d_{\mathrm{cool}}},
-\end{eqnarray}
-where $n_{\mathrm{e}}$ and $n_{\mathrm{ion}}$ are the post-shock
-  electron and ion number density. 
-  
-\emph{HMG: Not sure this is useful, but I had the formulas in latex anyway, so I just pasted them in here.}
 
 \subsubsection{Shock Interaction with the ISM}
-Assume the BRN ejecta of density $n_{\rm BRN}$ is expanding at $v_{\rm ej} \simeq 400$ km/s into a stationary external medium of particle density $n_{\rm ism}$.  The velocity of the forward shock in the lab frame is given by the shock jump conditions (for adiabatic index $\gamma = 5/3$),
-\be
-v_{\rm fsh} = \frac{4}{3}v_{\rm psh},
-\ee
-where $v_{\rm psh}$ is the velocity of the post-shock gas.  The reverse shock velocity (also in the lab frame) is given by
-\be
-v_{\rm rsh} \simeq \frac{4}{3}v_{\rm psh} - \frac{v_{\rm ej}}{3}
-\ee
-
-In the limit that the shocked gas is still moving out with the same velocity as the BRN, then $v_{\rm psh} \simeq v_{\rm ej}$, $v_{\rm fsh} \simeq (4/3)v_{\rm ej}$, and $v_{\rm rsh} \simeq v_{\rm ej}$ (i.e. the reverse shock is not yet making much progress moving back through the ejecta).  However, if, as we expect in the BRN from the bright UV emission, the shock has already swept up considerable gas from the external medium and begun to decelerate, then $v_{\rm fsh} \ll v_{\rm ej}$ and $v_{\rm rsh} \simeq -v_{\rm ej}/3$.
-
-From the jump conditions, the shocks will heat gas to a temperature
-\be
-kT_{\rm sh} \simeq \frac{3}{16}\mu m_p v_{\rm sh}^{2} \approx 0.3\,{\rm keV}\left(\frac{v_{\rm sh}}{500\,{\rm km/s}}\right)^{2},
-\ee
-where we have taken $\mu \simeq 0.62$ for fully ionized solar composition gas.  Here $v_{\rm sh}$ is the shock velocity relative to the upstream rest frame (i.e. $v_{\rm sh} \simeq v_{\rm fsh}$ in the case of the forward shock with stationary upstream, but $v_{\rm sh} \simeq v_{\rm ej}-v_{\rm rsh}$ in the reverse shock).  From the above, we expect the reverse shock will be strongest, with $v_{\rm sh} \simeq (4/3)v_{\rm ej} \approx 500$ km/s.
 
 Assume the BRN shocks cover a fraction $f_{\Omega} \simeq 0.3$ of the total 4$\pi$ solid angle.  The volume of the hot gas behind the shock is therefore $V_{\rm X} \simeq \frac{R_{\rm BRN}}{4}(4\pi f_{\Omega} R_{\rm BRN}^{3}) \simeq 2\times 10^{56}$ cm$^{-3}$, where we have taken $R_{\rm BRN} \approx 6\times 10^{18}$ cm as the BRN radius, and $R_{\rm BRN}/4$ is the radial thickness of the post-shock gas given its compression by a factor of 4 for a $\gamma = 5/3$ shock.
+
+The X-ray spectrum will be a combination of emission from collisionally excited lines and free-free emission and for low densities the plasma may not be in thermal ionization equilibrium after the shock. As an estimate, we continue looking at the free-free emission only.
 
 The total X-ray luminosity is given by
 \be
@@ -576,6 +562,28 @@ M_{\rm swept} \sim n m_p V_{\rm X} \sim 0.03M_{\odot} \sim 30M_{\rm J},
 \ee
 which is consistent with the lower limit of the BRN mass cited in \citet{2020Natur.587..387H} ($M_{\rm BRN} \gtrsim$ 4$M_{\rm J}$).
 
+
+
+
+\subsubsection{Outflow} \label{sec:outflow}
+Shock in outflows have been observed in X-ray sources of different evolutionary stage because kinematic energy can be converted into heat in a shock front (Some references either here or in introduction).
+Using the strong shock conditions we can transform the thermal energy
+k$T$, where k is Boltzmann's constant and $T$ is the temperature, into
+the pre-shock velocity in the shock rest frame $v_{\mathrm{shock}}$:
+\begin{equation} 
+\left(\frac{v_{\mathrm{shock}}}{500\textnormal{ km s}^{-1}}\right)^2 \approx 
+\frac{\textnormal{k}T}{0.33\textnormal{ keV}} \; .
+\label{vkt} 
+\end{equation}
+For a travelling shock wave, the pre-shock gas velocity is the sum of $v_{\mathrm{shock}}$ and the motion of the shock front.
+
+Given uncertainty on the fitted value, the observed X-ray temperature if fully consistent with outflow velocities of a few hundred km~s$^{-1}$, that can be deduced from the optical and UV data \citep{2020Natur.587..387H}. The location of the X-ray emission seems to fall slightly inside of the H$\alpha$ emission, but outside of the brightest UV emission (Fig.~\ref{fig:chandraimage}). The interpretation is complicated by the fact that see we both the receding and approaching outflow superimposed on the sky \citep{2020Natur.587..387H}.
+
+\emph{HMG: Could be a shock in front of the UV, as in heated to X-ray temperature and then cools to UV, could be a reverse shock behind halpha}.
+
+
+
+
 \section{Summary and outlook}
 \label{sec:summary}
 
@@ -587,7 +595,7 @@ KH was supported by the David {\&} Ellen Lee Prize Postdoctoral Fellowship in Ex
 MNG acknowledges support from MIT's Kavli Institute as a Juan Carlos Torres Fellow.
 \end{acknowledgements}
 
-\facilities{Chandra/ACIS}
+\facilities{Chandra/ACIS, TESS}
 
 \software{AstroPy \citep{2013A&A...558A..33A,2018AJ....156..123A}, CIAO \citep{2006SPIE.6270E..1VF}, NumPy \citep{van2011numpy,harris2020array}, Matplotlib \citep{Hunter:2007}, Sherpa \citep{2007ASPC..376..543D,doug_burke_2021_4428938}}
 
