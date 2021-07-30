@@ -13,7 +13,7 @@
 
 
 %% using aastex version 6.3
-\documentclass[linenumbers]{aastex631}
+\documentclass[]{aastex631}
 \usepackage{amsmath}
 \usepackage{amssymb}
 
@@ -250,12 +250,7 @@ One key stellar behavioral shift that may rise as a result of a stellar merger i
 
 \citet{Soker&Tylenda2007} suggest the strongest magnetic activity tied to a stellar merger's revitalized dynamo may last centuries. Recent suspected stellar mergers (like red luminous novae) are obscured from view by outflows ejected during the merger event itself (e.g., \citealt{Bond+2003, Tylenda+2016}). TYC 2597-735-1 shows evidence that it harbors a persisting, strong magnetic field \citep[e.g., H$\alpha$ emission and variability, radial velocity shifts strongly correlated with the Ca II IRT stellar atmospheric features][]{2020Natur.587..387H}. One way to test whether its hypothetical magnetic field exists is to look for signs of X-ray emission at TYC 2597-735-1 and compare its luminosity to the remnant's bolometric luminosity \citep{Soker&Tylenda2007}.
 
-<<<<<<< HEAD
 TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring Nebula'' (BRN; \citealt{2020Natur.587..387H}), were partially observed by chance with Chandra over a decade ago. Here, we report the findings of this serendipitous \emph{Chandra} observation and present a new \emph{TESS} lightcurve. We explore whether the X-ray emission observed at TYC 2597-735-1 is consistent with dynamo-driven magnetic field activity or other sources near the star. We summarize the stellar properties of TYC 2597-735-1 in Section~\ref{sec:properties}. In Section~\ref{sec:data}, we describe the observations, the source detection methods implemented to retrieve X-ray signal from regions in the BRN and around TYC 2597-735-1 and the X-ray properties of these regions. In Section~\ref{sec:discussion}, we explore different physical mechanisms that may explain the X-ray luminosity and spectral characteristics observed for TYC 2597-735-1 and place physical limits on the properties of the BRN shock region from its X-ray diagnostics. We conclude in Section~\ref{sec:summary} with a summary and describe prospects for future observations.
-=======
-TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring Nebula'' (BRN; \citealt{2020Natur.587..387H}), were partially observed by chance with Chandra over a decade ago. Here, we report the findings of this serendipitous \emph{Chandra} observation and present a new \emph{TESS} lightcurve. We explore whether the X-ray emission observed at TYC 2597-735-1 is consistent with dynamo-driven magnetic field activity or other sources near the star. We summarize the stellar properties of TYC 2597-735-1 in Section~\ref{sec:properties}. In Section~\ref{sec:data}, we describe the observations, the source detection methods implemented to retrieve X-ray signal from regions in the BRN and around TYC 2597-735-1 and the X-ray properties of these regions. In Section~\ref{sec:discussion}, we explore different physical mechanisms that may explain the X-ray luminosity and spectral characteristics observed for TYC 2597-735-1 and place physical limits on the properties of the BRN shock region from its X-ray diagnostics. We conclude in Section~\ref{sec:summary} with a summary and describe prospects for future observations.
->>>>>>> origin/overleaf-2021-07-30-0013
-
 
 
 %Its past stellar collision was made possible by the chance discovery of a unique, exclusively far ultraviolet (FUV)-emitting ring of diffuse light surrounding it. This FUV ring nebula, so-called the ``blue ring nebula'' (BRN), was captured by the {\it GALEX} space telescope in 2004 and was found to be powered by molecular hydrogen (H$_2$) fluorescence: H$_2$ colliding with energetic electrons in their proximity that were released when a forward shock swept through the nebulous material. That same H$_2$ was launched in a massive outflow from the explosive merger of two stars in the TYC 2597-735-1 system $\grtsim$2,000 years ago. Forward of the H$_2$ fluorescence ring are filametantary shocks outlining the BRN, which shows line emission from many transitions in the H-Balmer line series. \citet{2020Natur.587..387H} find that the ratio of the Balmer line luminosities suggest the shock front is non-radiative: that the density of the shock is low and is not able to efficiently cool.
@@ -292,7 +287,7 @@ time since merger & & 1000-5000 yr\\
 
 
 \section{Data analysis} \label{sec:data}
-\subsection{Data reduction}
+\subsection{Chandra data reduction}
 TYC 2597-735-1 was observed by Chandra on 2007-11-26 for 8.7~ks.
 We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4.13.0 \citep{2006SPIE.6270E..1VF} in the VFAINT mode, which reduces the background compared to the default FAINT mode processing. This is a serendipitous observation where TYC 2597-735-1 falls by chance on one of the outer CCDs (CCD S2 on the ACIS-S array). TYC 2597-735-1 is located close to the chip edge and only a fraction of the H$\alpha$ and UV emitting regions around the central star is covered in the observations. Because TYC 2597-735-1 is located off-axis, the PSF is significantly wider than on-axis. Figure~\ref{fig:chandraimage} shows the positions of individual X-ray photons overlayed on the H$\alpha$ images and UV emission contours from \citet{2020Natur.587..387H}, limited to a soft X-ray band.
 \begin{figure*}
@@ -302,11 +297,11 @@ We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4
     \label{fig:chandraimage}
 \end{figure*}
 
-\subsection{Source detection}
+\subsection{X-ray source detection}
 We expect any emission from the outflows to be soft (section~\ref{sec:outflow}), but absorbed due to the large distance of TYC 2597-735-1. To reduce the high-energy background, which can overwhelm weak, soft sources, we construct a narrow band image in the 1-2~keV range
 and run a source detection with the CIAO \texttt{wavdetect} task, which convolves the input image with a wavelet, taking the size of the PSF at that image location into account. We bin up the image such that it contains $2.6\times10^4$ pixels in Chandra's field-of-view and set the significance threshold such that we expect no more than one false detection in $10^5$~pixels. That way, any source detected by \texttt{wavdetect} is likely to be real. We find three sources (table~\ref{tab:src}), all of which coincide with UV/optical emission features. All three sources have similar count rates and similar PSF sizes and thus similar positional uncertainties of about 2\arcsec{}.
 
-\begin{table}
+\begin{table*}
 \caption{Detected X-ray sources\label{tab:src}}
 \begin{tabular}{ccccccc}
 \hline \hline
@@ -318,7 +313,7 @@ X-East & $16^\mathrm{h}48^\mathrm{m}50^\mathrm{s}$ & $35^\circ12{}^\prime28{}^{\
 X-North & $16^\mathrm{h}48^\mathrm{m}35^\mathrm{s}$ & $35^\circ15{}^\prime34{}^{\prime\prime}$ & 2.8 & 3.2 & $6.0 \pm 2.8$ & $1.96 \pm 0.02$ \\
 \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 
 We detect a source at the location of TYC 2597-735-1 with (in our narrow band image) $9\pm3$ counts on a background of $1.52\pm0.01$ counts. (The background is known to a high precision because \texttt{wavdetect} determines it over a large area.) Additionally, the probability that any one source randomly overlaps with the known position of TYC 2597-735-1 within the 90\% PSF radius (0.28 arcmin for an energy of 1.5~keV and at the position of TYC 2597-735-1) is only 0.2\%. Thus, we regard this as a highly reliable detection of X-ray emission from TYC 2597-735-1, albeit with large uncertainties on flux and spectral properties due to the small number of counts.
@@ -329,27 +324,30 @@ Given the low number of counts and the size of the Chandra PSF that far away fro
 
 We also search for extended emission on larger scales that coincide with either the FUV emission (using a region bounded by the white contours  in Fig.~\ref{fig:chandraimage}) or a region FUV and H$\alpha$, i.e.\ a ring on the outside of the white contour in Fig.~\ref{fig:chandraimage} that contains the sources labelled ``X-North'' and ``X-East''. The latter might be a sign of a shocked, X-ray emitting region in front of the FUV emission. However, we do not know a-priory which level of contour lines might be correlated, so the selection of the region is somewhat arbitrary. We do not see significantly enhanced emission --except for the three point-like sources discussed above-- compared to a background region on the northern half of the chip. To obtain an order-of-magnitude estimate how bright an extended source would have to be for a secure detection, we take the $3\sigma$ uncertainty of the observed background flux (about $10^{-5}$~counts~s$^{-1}$~arcsec$^{-2}$) in the same 1-2~keV energy range as for the source detection above and convert that the number into an energy flux per surface area in the plane of the sky. We find that emission would have to be stronger than a few times $10^{31}$~erg~s$^{-1}$~pc$^{-2}$ in this band to be detected significantly above the background.
 
-\subsection{Source properties}
+\subsection{X-ray source properties}
+\label{sec:xrayspectra}
 For all three regions, the detected soft photons are distributed over the observing time; we do not see strong clustering that would indicate a large flare, but given the low count numbers, variability with factors of a few cannot be excluded.
 
-For low count numbers, a formal spectral fit does not provide very reliable results; \citet{2010ApJ...708.1760G} instead provide a non-parametric method to estimate X-ray properties of a source based on the median energy. Their method is validated through extensive simulations and comparison with about 2000 faint stellar source observed with Chandra/ACIS; it essentially relies on the fact that photons in the hard band are not affected by the absorbing column density $N_\mathrm{H}$, so the median energy in the hard band can be used to estimate the plasma temperature. With that fixed, the soft band flux can provide an estimate of $N_\mathrm{H}$. Without hard flux, as in our case, there is a fundamental degeneracy affecting any parameter estimation method: A cool, but bright plasma with a high $N_\mathrm{H}$ produces a spectrum very similar to the spectrum emitted from a hotter, but less absorbed plasma.
-
-We use both the \citet{2010ApJ...708.1760G} method and spectral fitting to estimate the parameters of TYC 2597-735-1 and the two emitting regions located close to the H$\alpha$ ring, where we combine the spectra of the latter two regions, since the count number is very low and X-ray properties (see the color of the detected photons in Fig.~\ref{fig:chandraimage}) and location (between H$\alpha$ ring and UV emission) are very similar.
+For low count numbers, a formal spectral fit does not provide very reliable results; for stellar sources \citet{2010ApJ...708.1760G} provide a non-parametric method to estimate X-ray properties of a source based on the median energy. Their method is validated through extensive simulations and comparison with about 2000 faint stellar source observed with Chandra/ACIS; it essentially relies on the fact that photons in the hard band are not affected by the absorbing column density $N_\mathrm{H}$, so the median energy in the hard band can be used to estimate the plasma temperature. With that fixed, the soft band flux can provide an estimate of $N_\mathrm{H}$. Without hard flux, as in our case, there is a fundamental degeneracy affecting any parameter estimation method: A cool, but bright plasma with a high $N_\mathrm{H}$ produces a spectrum very similar to the spectrum emitted from a hotter, but less absorbed plasma.
 
 We extract spectra for all three sources using circular extraction regions that encompass 90\% of the PSF at 1.5~keV at the location of the source. A background spectrum is extracted from a large region on the same chip, that is located outside of the UV contours shown in Fig~\ref{fig:chandraimage}. Below 7~keV, the background is well described by a flat component, except for a significant feature around 2.2~keV. Therefore, we exclude the regions 2.0-2.5~keV and $>7.0$~keV from fitting. We then simultaneously fit the source and background spectra using a modified Cash statistic \citep{1979ApJ...228..939C} as implemented in Sherpa \citep{2007ASPC..376..543D,doug_burke_2021_4428938}. To fit source emission, we use a model of an absorbed, collisionally-excited plasma \citep[APEC model,][]{2012ApJ...756..128F} and add the flat background model, scaled for the different extraction regions. That way, we avoid subtracting the background and retain Poisson statistics. All fits are done on unbinned data, but the spectra are shown binned for display in Figs.~\ref{fig:TYC_spec} and \ref{fig:combined}.
 
-The spectrum for TYC 2597-735-1 is shown in Fig.~\ref{fig:TYC_spec}. We fit $N_\mathrm{H}=(6\pm5)\times10^{21}$~cm$^{-2}$ and a plasma temperature in the range .1-1.5~keV, where the low end of the range requires very large values of $N_\mathrm{H}$ and emission measure. For temperatures around 1~keV, common for stellar sources, the unabsorbed flux is of order $10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $3\times 10^{30}$~erg~s$^{-1}$ with uncertainties of a factor a few. The non-parametric method finds $N_\mathrm{H}$ around $1\times10^{22}$~cm$^{-2}$ and points to a stellar model with an intrinsic plasma temperature of 0.8~keV, leading to similar total fluxes.
+The spectrum for TYC 2597-735-1 is shown in Fig.~\ref{fig:TYC_spec}. We fit $N_\mathrm{H}=(6\pm5)\times10^{21}$~cm$^{-2}$ and a plasma temperature in the range .1-1.5~keV, where the low end of the range requires very large values of $N_\mathrm{H}$ and emission measure. For temperatures around 1~keV, common for stellar sources, the unabsorbed flux is of order $10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $3\times 10^{30}$~erg~s$^{-1}$ with uncertainties of a factor a few.
+
+The total galactic absorption in this line of sight is about $N_\mathrm{H}=2\times10^{21}$~cm$^{-2}$ \citep{1990ARA&A..28..215D}. Fitting just the temperature, but fixing the absorbing column density leads to a model with similar spectral shape (red line in Fig.~\ref{fig:TYC_spec}), but a preferred higher temperature $kT=4_{-3}^{+\infty}$~keV; this is a sign of the ambiguity between plasma temperature and absorbing column density mentioned above which simply cannot be resolved without better data. In this scenario, a weaker source ($2\times10^{-14}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $5\times 10^{29}$~erg~s$^{-1}$) would be sufficient to explain the observed photons. \cite{2020Natur.587..387H} found essentially no reddening towards TYC 2597-735-1, but depending on the position of the X-ray emitting gas it is possible that accretion columns or the disk are in our line-of-sight and that the $N_\mathrm{H}$ observed in X-rays is larger than the reddening of the optical spectra. 
+
+The non-parametric method finds $N_\mathrm{H}$ around $1\times10^{22}$~cm$^{-2}$ and points to a stellar model with an intrinsic plasma temperature of 0.8~keV, leading to similar total fluxes.
+
 \begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{figures/TYC_spec.pdf}
+    \plotone{figures/TYC_spec.pdf}
     \caption{Spectrum of TYC 2597-735-1 binned to two count per bin. Error bars are just to guide the eye. The orange line shows the best fit model discussed in the text. Green crosses show the background rate, scaled from a much larger area. The background feature that caused us to ignore the region 2.0-2.5~keV in the fit is also visible. Error bars on the background are omitted for clarity.
     \label{fig:TYC_spec}}
 \end{figure}
 
-The combined spectrum for the other two emission regions is shown in Fig.~\ref{fig:combined}. We fit $N_\mathrm{H}=(1.3_{-0.6}^{+2})\times10^{22}$~cm$^{-2}$ and a plasma temperature of $0.5_{-0.3}^{+\infty}$~keV. For temperatures around 0.5~keV, which we will argue are physically reasonable in Sect~\ref{sec:outflow}, the unabsorbed flux is of order $3 \times 10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $10^{31}$~erg~s$^{-1}$ with uncertainties of a factor a few. We do not apply the non-parametric method, since this is not a stellar source.
+We combined the spectra for X-East and X-North because the count number is very low and X-ray properties (see the color of the detected photons in Fig.~\ref{fig:chandraimage}) and location (between H$\alpha$ ring and UV emission) are very similar.
+The combined spectrum for the other two emission regions is shown in Fig.~\ref{fig:combined}. We fit $N_\mathrm{H}=(1.3_{-0.6}^{+2})\times10^{22}$~cm$^{-2}$ and a plasma temperature of $0.5_{-0.3}^{+\infty}$~keV. For temperatures around 0.5~keV, which we will argue are physically reasonable in Sect~\ref{sec:outflow}, the unabsorbed flux is of order $3 \times 10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $10^{31}$~erg~s$^{-1}$ with uncertainties of a factor a few. We do not apply the non-parametric method, since this is not a stellar source. As in the case for TYC 2597-735-1, a hotter source with a lower flux seen though a lower absorbing column density could also generate the observed spectrum.
 \begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{figures/combined.pdf}
+    \plotone{figures/combined.pdf}
     \caption{Combined spectrum from the two X-ray detected regions in the outflow. See Fig.~\ref{fig:TYC_spec} for an explanation of symbols.
     \label{fig:combined}}
 \end{figure}
@@ -369,12 +367,12 @@ On the other hand, the TESS data release notes\footnote{\url{https://tasoc.dk/do
 
 However, the similarity of the expected stellar rotation period and the TESS orbit duration (both $\sim14$\,days) make it difficult to disentangle the true origin of the variability. TESS will re-observe TYC 2597-735-1 in sectors 51 and 52 (from 2022-Apr-22 until 2022-Jun-13). This extended observing window, the possibility of increased observation cadence (2\,min or even 20\,s cadence) and improved visibility will help to understand TYC 2597-735-1's behavior at optical wavelengths.
 
-\begin{figure}
+\begin{figure*}
     \centering
     \includegraphics[width=0.8\textwidth]{figures/TESS_light_curve.png}
     \caption{\textcolor{red}{THIS IS JUST A PLACEHOLDER.} The TESS light curve, local background, and global background for TYC 2597-735-1. The observations taken in sector 25 with camera 1 range from 2020-May-13 until 2020-Jun-08. The light curve has been corrected for background effects and displays significant variability. While the beginnings of each TESS orbit suffer from systematics caused by Earth's scattered light (grey-shaded areas), the ends of the orbit show brightness increases that could be of astrophysical nature.
     \label{fig:TESS_light_curve}}
-\end{figure}
+\end{figure*}
 
 \cite{2020Natur.587..387H} noticed an RMS scatter around 0.008~mag --significantly larger than the formal uncertainties-- between runs of ground-based $B$ band observations between 2015 and 2019. They attributed this to systematic calibration uncertainties. However, given the variability in the TESS lightcurve on a similar level, this might instead be a signature of stellar activity.
 
@@ -432,7 +430,7 @@ L_{\rm j} \approx \frac{1}{2}\eta_{\rm j}\dot{M}_{\star}v_{\rm j}^{2} \approx 5\
 \label{eqn:jetpower}
 \ee
 This is in principle sufficient to explain the X-ray point source overlapping TYC, $L_{\rm X} \sim 10^{31}$ erg s$^{-1}$. To match the temperature of the X-rays, we need internal shocks of order 500~km~s$^{-1}$ (eqn.~\ref{eqn:Tshock})
-for instance as a result of the wind velocity increasing with time due to the radial contraction of TYC (and hence increase of the escape speed from the inner edge of the accretion disk) as the star undergoes thermal-timescale contraction following the merger \citep[][extended Figure 7]{2020Natur.587..387H}. In young stars, outflows often have different velocity components, where only the fastest and innermost components shock to produce X-rays, while most of the mass in seen in slower components. For example, in DG~Tau, the measured velocity in the UV is similar to the outflow velocity of the BRN. However, such a scenario would require an unreasonably large mass-loss, since eqn.~\ref{eqn:jetpower} already requires that 10\% of the total accretion rate shocks to produce X-rays. The entire outflow would have to be accelerated to $\sim 900$~km~s$^{-1}$ (several times the escape speed), and pass through a shock front with $\Delta v=500$~km~s$^{-1}$, to produce sufficient luminosity at X-ray emitting temperatures and continue the outflow with the velocity of $\sim 400$~km~s$^{-1}$ observed in the BRN. We cannot rule out this scenario, but the high launching speed and the fact that it does not explain the variability in the TESS and RV lightcurves make it unlikely that shock at the base of the outflow are the main component of the observed X-ray emission.
+for instance as a result of the wind velocity increasing with time due to the radial contraction of TYC (and hence increase of the escape speed from the inner edge of the accretion disk) as the star undergoes thermal-timescale contraction following the merger \citep[][extended Figure 7]{2020Natur.587..387H}. In young stars, outflows often have different velocity components, where only the fastest and innermost components shock to produce X-rays, while most of the mass in seen in slower components. For example, in DG~Tau, the measured velocity in the UV is similar to the outflow velocity of the BRN. However, such a scenario would require an unreasonably large mass-loss, since eqn.~\ref{eqn:jetpower} already requires that 10\% of the total accretion rate shocks to produce X-rays. The entire outflow would have to be accelerated to $\sim 900$~km~s$^{-1}$ (several times the escape speed), and pass through a shock front with $\Delta v=500$~km~s$^{-1}$, to produce sufficient luminosity at X-ray emitting temperatures and continue the outflow with the velocity of $\sim 400$~km~s$^{-1}$ observed in the BRN. We cannot rule out this scenario, but the high launching speed and the fact that it does not explain the variability in the TESS and RV lightcurves make it unlikely that shock at the base of the outflow are the main component of the observed activity.
 
 
 \textcolor{blue}{HMG: I'm not convinced that the scenario above is realistic. The entire mass outflow would have to be 900 km/s fast (500 for the shock and 400 because we see flow velocity in the BRN after). Thus, I commented out Brian's section on N\_H for such a scenario. We can bring it back in, if you disagree!}
@@ -452,7 +450,7 @@ for instance as a result of the wind velocity increasing with time due to the ra
 %Equation (\ref{eq:NHjet}) shows that, in principle, jetted X-ray emission could originate from radii as small as $\sim 10^{-6}$ pc (corresponding to $\sim 10^{-4}$ arcsec projected angular offset from TYC) and not overproduce the $N_{\rm H} \approx 10^{21}-10^{22}$ cm$^{-1}$ values of the X-ray source.  At this radius, the density could be as high as $n_{\rm j}(10^{-4}{\rm pc}) \sim 10^{7}{\rm cm^{-3}},$ more than sufficient for any shocks in the outflow to be radiative (i.e., to cool through UV/X-ray emission faster than the radial expansion time) and hence to tap into a sizable fraction of the jet power, $L_{\rm j}$, to power the observed X-ray emission.
 
 
-\subsubsection{Star Dynamo Generated X-rays}
+\subsubsection{Activity powered by a stellar dynamo}
 % From emails:
 % Ken - 07/09
 % Okay, FINALLY got to re-running some models and looking at the time evolution of the Rossby number.  This is for the 0.1 Msol companion merging when the primary has a radius of 5 Rsol (i.e. the model that best fit the observations in the extended data Figure 7 of the 2020 paper).  It has two convection zones up through >5000 yr: one deep one (r ~ 0.5 Rsol) where the planet disrupted, and a surface one.  I'm just quoting values for the surface convection zone.
@@ -502,12 +500,14 @@ Thus, taking $L_{\rm bol} = 100L_{\odot}$ for TYC and ${\rm Ro} = 4$, we find th
 
 
 \subsection{Large scale outflow}
+\label{sec:outflow}
 We now place limits on the properties of the outflow and the BRN using the upper limit for large-scale X-ray emission coincident with the FUV emission and our detection of the point-like sources X-East and X-North.
 
 Assume the BRN ejecta of density $n_{\rm BRN}$ is expanding at $v_{\rm ej} \simeq 400$ km/s into a stationary external medium of particle density $n_{\rm ism}$.  In the limit that the shocked gas is still moving out with the same velocity as the BRN, we get  $v_{\rm psh} \simeq v_{\rm ej}$, $v_{\rm fsh} \simeq (4/3)v_{\rm ej}$, and $v_{\rm rsh} \simeq v_{\rm ej}$ (i.e.\ the reverse shock is not yet making much progress moving back through the ejecta), using eqns~\ref{eqn:vsh1} and \ref{eqn:vsh2}.  However, if, as we expect in the BRN from the bright UV emission, the shock has already swept up considerable gas from the external medium and begun to decelerate, then $v_{\rm fsh} \ll v_{\rm ej}$ and $v_{\rm rsh} \simeq -v_{\rm ej}/3$.
 
 $v_{\rm sh}$ in eqn.~\ref{eqn:Tshock} is the shock velocity relative to the upstream rest frame (i.e. $v_{\rm sh} \simeq v_{\rm fsh}$ in the case of the forward shock with stationary upstream, but $v_{\rm sh} \simeq v_{\rm ej}-v_{\rm rsh}$ in the reverse shock).  From the above, we expect the reverse shock will be strongest, with $v_{\rm sh} \simeq (4/3)v_{\rm ej} \approx 500$ km/s.
 
+This argument makes it reasonable to interpret the X-ray spectra of X-East and X-North as a plasma with a temperature around 0.3-0.5~keV, as we have done in section~\ref{sec:xrayspectra}.
 
 \subsubsection{Sources X-East and X-North}
 The sources X-East and X-North are compatible with point sources. Given the size of the PSF, we use 1~arcsec ($d_\mathrm{sh}=1900$~au at the distance of TYC 2597-735-1) as upper limit of the source size and 500~km~s$^{-1}$ as the shock velocity for the ejecta, compatible with the observed X-ray spectrum.
@@ -531,7 +531,8 @@ Since $d_{\mathrm{cool}}$ is much smaller than the size scale of the outflow we 
 To fit such a shock into 1900~au, the density must be $>10^3\mathrm{ cm}^{-3}$. The emission spectra calculated by \citet{2002ApJ...576L.149R} include both continuum and line emission in the X-ray band. According to their equations 8 and 9, a non-radiative shock with $n_0=10^3\mathrm{ cm}^{-3}$ and a diameter equal to the size of the PSF emits just enough flux to explain the X-ray emission from either X-North or X-East. Such a shock would have a mass flux of $\dot M = \mu m_\mathrm{p} n_0 v_\mathrm{sh} \pi (d_\mathrm{sh}/2)^2 \sim 10^{-8}\;M_\sun\;\mathrm{yr}^{-1}$.
 Should the densities by higher, both the cooling length and the volume of the shock would be smaller, but the mass flux stays unchanged.
 
-\citet{2020Natur.587..387H} estimate the total mass (of neutral hydrogen) of the BRN to $<0.008\;M_\sun{}$. If the mass of the BRN was ejected over the course of 1000~yr, the mass flux is $10^{-5}\;M_\sun\;\mathrm{yr}^{-1}$. The two regions X-North and X-East together cover only a small fraction of the total area of the BRN (Fig.~\ref{fig:chandraimage}), but it is conceivable that 0.1\% of the total mass flux of the BRN outflow is concentrated at these locations. In order to generate X-rays here but not in other parts of the BRN, some special condition must trigger a stronger shock here, such as a pre-existing clump in the ISM which serves as obstacle for the shock. X-North and X-East are located just on the outside of the FUV emission on the ring of the H$\alpha$ line, so the ISM may be be cleared in these locations yet. Similarly, the initial outflow could be clumpy and inhomogeneous in density and velocity and X-North and X-East represent two locations where such dense clumps are colliding; if that is the case, then X-ray sources may flicker on and off all around the ring over a time scale of $<20$~yr (gas at 500~km~s$^{-1}$ needs 20 years to pass through a cooling zone of $d_{\mathrm{cool}}=2000$~au). This hypothesis is testable with new observations!
+\citet{2020Natur.587..387H} estimate the total mass (of neutral hydrogen) of the BRN to $<0.008\;M_\sun{}$. If the mass of the BRN was ejected over the course of 1000~yr, the mass flux is $10^{-5}\;M_\sun\;\mathrm{yr}^{-1}$. The two regions X-North and X-East together cover only a small fraction of the total area of the BRN (Fig.~\ref{fig:chandraimage}), but it is conceivable that 0.1\% of the total mass flux of the BRN outflow is concentrated at these locations. In order to generate X-rays here but not in other parts of the BRN, some special condition must trigger a stronger shock here, such as a pre-existing clump in the ISM which serves as obstacle for the shock. X-North and X-East are located just on the outside of the FUV emission on the ring of the H$\alpha$ line, so the ISM may not be cleared in these locations yet. Similarly, the initial outflow could be clumpy and inhomogeneous in density and velocity and X-North and X-East represent two locations where such dense clumps are colliding; if that is the case, then X-ray sources may flicker on and off all around the ring over a time scale of $<20$~yr (gas at 500~km~s$^{-1}$ needs 20 years to pass through a cooling zone of $d_{\mathrm{cool}}=2000$~au). This hypothesis is testable with new observations!
+
 The H$\alpha$ emission ring also shows some clumpiness on the outside of the BRN. On the other hand, the UV emission from the BRN itself is remarkably smooth, even when taking into account the larger PSF of \emph{GALEX} ($FWHM \sim 5$~arcsec) compared to the H$\alpha$ observations.
 
 
@@ -566,27 +567,6 @@ This in turn places a limit on the amount of mass in the BRN (or mass of swept-u
 M_{\rm swept} \sim n m_p V_{\rm X} \sim 0.03M_{\odot} \sim 30M_{\rm J},
 \ee
 which is consistent with the lower limit of the BRN mass cited in \citet{2020Natur.587..387H} ($M_{\rm BRN} \gtrsim$ 4$M_{\rm J}$).
-
-
-
-
-\subsubsection{Outflow} \label{sec:outflow}
-Shock in outflows have been observed in X-ray sources of different evolutionary stage because kinematic energy can be converted into heat in a shock front (Some references either here or in introduction).
-Using the strong shock conditions we can transform the thermal energy
-k$T$, where k is Boltzmann's constant and $T$ is the temperature, into
-the pre-shock velocity in the shock rest frame $v_{\mathrm{shock}}$:
-\begin{equation}
-\left(\frac{v_{\mathrm{shock}}}{500\textnormal{ km s}^{-1}}\right)^2 \approx
-\frac{\textnormal{k}T}{0.33\textnormal{ keV}} \; .
-\label{vkt}
-\end{equation}
-For a travelling shock wave, the pre-shock gas velocity is the sum of $v_{\mathrm{shock}}$ and the motion of the shock front.
-
-Given uncertainty on the fitted value, the observed X-ray temperature if fully consistent with outflow velocities of a few hundred km~s$^{-1}$, that can be deduced from the optical and UV data \citep{2020Natur.587..387H}. The location of the X-ray emission seems to fall slightly inside of the H$\alpha$ emission, but outside of the brightest UV emission (Fig.~\ref{fig:chandraimage}). The interpretation is complicated by the fact that see we both the receding and approaching outflow superimposed on the sky \citep{2020Natur.587..387H}.
-
-\emph{HMG: Could be a shock in front of the UV, as in heated to X-ray temperature and then cools to UV, could be a reverse shock behind halpha}.
-
-
 
 
 \section{Summary and outlook}
