@@ -1,4 +1,4 @@
-% Tasks: 
+% Tasks:
 % Put in estimate of galactic NH (Moritz)
 % Dickey and Lockman, 1990, Annu. Rev. Astron. Astrophys., 28, 215
 % get: 1.73 e20 - maybe plot second model with nh fixed?
@@ -22,19 +22,19 @@
 %% can be invoked like this:
 %%
 %% \documentclass[arguments]{aastex631}
-%% 
+%%
 %% where the layout options are:
 %%
 %%  twocolumn   : two text columns, 10 point font, single spaced article.
 %%                This is the most compact and represent the final published
 %%                derived PDF copy of the accepted manuscript from the publisher
 %%  manuscript  : one text column, 12 point font, double spaced article.
-%%  preprint    : one text column, 12 point font, single spaced article.  
+%%  preprint    : one text column, 12 point font, single spaced article.
 %%  preprint2   : two text columns, 12 point font, single spaced article.
 %%  modern      : a stylish, single text column, 12 point font, article with
 %% 		  wider left and right margins. This uses the Daniel
 %% 		  Foreman-Mackey and David Hogg design.
-%%  RNAAS       : Supresses an abstract. Originally for RNAAS manuscripts 
+%%  RNAAS       : Supresses an abstract. Originally for RNAAS manuscripts
 %%                but now that abstracts are required this is obsolete for
 %%                AAS Journals. Authors might need it for other reasons. DO NOT
 %%                use \begin{abstract} and \end{abstract} with this style.
@@ -44,19 +44,19 @@
 %% There are other optional arguments one can invoke to allow other stylistic
 %% actions. The available options are:
 %%
-%%   astrosymb    : Loads Astrosymb font and define \astrocommands. 
-%%   tighten      : Makes baselineskip slightly smaller, only works with 
+%%   astrosymb    : Loads Astrosymb font and define \astrocommands.
+%%   tighten      : Makes baselineskip slightly smaller, only works with
 %%                  the twocolumn substyle.
 %%   times        : uses times font instead of the default
 %%   linenumbers  : turn on lineno package.
 %%   trackchanges : required to see the revision mark up and print its output
-%%   longauthor   : Do not use the more compressed footnote style (default) for 
+%%   longauthor   : Do not use the more compressed footnote style (default) for
 %%                  the author/collaboration/affiliations. Instead print all
-%%                  affiliation information after each name. Creates a much 
-%%                  longer author list but may be desirable for short 
+%%                  affiliation information after each name. Creates a much
+%%                  longer author list but may be desirable for short
 %%                  author papers.
 %% twocolappendix : make 2 column appendix.
-%%   anonymous    : Do not show the authors, affiliations and acknowledgments 
+%%   anonymous    : Do not show the authors, affiliations and acknowledgments
 %%                  for dual anonymous review.
 %%
 %% these can be used in any combination, e.g.
@@ -92,8 +92,8 @@
 %\submitjournal{PSJ}
 
 %%
-%% For manuscript without any need to use \collaboration the 
-%% \AuthorCollaborationLimit command from v6.2 can still be used to 
+%% For manuscript without any need to use \collaboration the
+%% \AuthorCollaborationLimit command from v6.2 can still be used to
 %% show a subset of authors.
 %
 %\AuthorCollaborationLimit=2
@@ -138,9 +138,9 @@
 %% one line. However, you may use \\ to force a line break if
 %% you desire. In v6.31 you can include a footnote in the title.
 
-%% A significant change from earlier AASTEX versions is in the structure for 
-%% calling author and affiliations. The change was necessary to implement 
-%% auto-indexing of affiliations which prior was a manual process that could 
+%% A significant change from earlier AASTEX versions is in the structure for
+%% calling author and affiliations. The change was necessary to implement
+%% auto-indexing of affiliations which prior was a manual process that could
 %% easily be tedious in large author manuscripts.
 %%
 %% The \author command is the same as before except it now takes an optional
@@ -149,7 +149,7 @@
 %%
 %% This will hyperlink the author name to the author's ORCID page. Note that
 %% during compilation, LaTeX will do some limited checking of the format of
-%% the ID to make sure it is valid. If the "orcid-ID.png" image file is 
+%% the ID to make sure it is valid. If the "orcid-ID.png" image file is
 %% present or in the LaTeX pathway, the OrcID icon will appear next to
 %% the authors name.
 %%
@@ -157,9 +157,9 @@
 %% to \affiliation. AASTeX v6.31 will automatically index these in the header.
 %% When a duplicate is found its index will be the same as its previous entry.
 %%
-%% Note that \altaffilmark and \altaffiltext have been removed and thus 
+%% Note that \altaffilmark and \altaffiltext have been removed and thus
 %% can not be used to document secondary affiliations. If they are used latex
-%% will issue a specific error message and quit. Please use multiple 
+%% will issue a specific error message and quit. Please use multiple
 %% \affiliation calls for to document more than one affiliation.
 %%
 %% The new \altaffiliation can be used to indicate some secondary information
@@ -200,24 +200,24 @@
 \affiliation{author ordering will be decided later}
 
 %% Note that the \and command from previous versions of AASTeX is now
-%% depreciated in this version as it is no longer necessary. AASTeX 
+%% depreciated in this version as it is no longer necessary. AASTeX
 %% automatically takes care of all commas and "and"s between authors names.
 
 %% AASTeX 6.31 has the new \collaboration and \nocollaboration commands to
-%% provide the collaboration status of a group of authors. These commands 
+%% provide the collaboration status of a group of authors. These commands
 %% can be used either before or after the list of corresponding authors. The
 %% argument for \collaboration is the collaboration identifier. Authors are
-%% encouraged to surround collaboration identifiers with ()s. The 
+%% encouraged to surround collaboration identifiers with ()s. The
 %% \nocollaboration command takes no argument and exists to indicate that
 %% the nearby authors are not part of surrounding collaborations.
 
-%% Mark off the abstract in the ``abstract'' environment. 
+%% Mark off the abstract in the ``abstract'' environment.
 \begin{abstract}
 abstract here
 
 \end{abstract}
 
-%% Keywords should appear after the \end{abstract} command. 
+%% Keywords should appear after the \end{abstract} command.
 %% The AAS Journals now uses Unified Astronomy Thesaurus concepts:
 %% https://astrothesaurus.org
 %% You will be asked to selected these concepts during the submission process
@@ -228,30 +228,30 @@ abstract here
 
 \section{Introduction} \label{sec:intro}
 %%%% Old intro
-% Binary and multi-star systems make up an appreciable percentage the star systems in the Galaxy \citep{Raghavan+2010}. It is no surprise, then, that eventually, closely orbiting binary stars may interact through events that exchange and shed matter from one star to another (e.g., common envelope evolution (CEE); \citealt{}) or end with the complete engulfment of one star by another (e.g., \citealt{}). This exchange of matter and energy between stars in close orbit with one another leads not only to drastic consequences on the evolutionary properties of the system (e.g., the formation of an accretion disk; \citealt{}), but to dramatic changes in the properties of the stars themselves. 
+% Binary and multi-star systems make up an appreciable percentage the star systems in the Galaxy \citep{Raghavan+2010}. It is no surprise, then, that eventually, closely orbiting binary stars may interact through events that exchange and shed matter from one star to another (e.g., common envelope evolution (CEE); \citealt{}) or end with the complete engulfment of one star by another (e.g., \citealt{}). This exchange of matter and energy between stars in close orbit with one another leads not only to drastic consequences on the evolutionary properties of the system (e.g., the formation of an accretion disk; \citealt{}), but to dramatic changes in the properties of the stars themselves.
 
-% In the case of a complete stellar merger event, the engulfment process adds a significant amount of energy into the consuming star (E$>$XXX; \citealt{}), throwing its atmosphere and interior our of equilibrium and leading to the production of enlarged convective regions, elevated levels of magnetic activity, stellar envelope inflation, and a spin-up in stellar rotation rate \citep{}. Outflows and jets of appreciable speeds ($v>$100's km/s), powered by the stellar collision itself, contaminates the intervening space with quick-forming dust, molecules, and gas \citep{}. Over time, these outflows sweep up and build up appreciable mass, initiating interstellar shocks that change the energetic properties of interstellar material around them and potentially destroying the dust-rich matter formed as the outflow cooled away from its stellar merger origins. 
+% In the case of a complete stellar merger event, the engulfment process adds a significant amount of energy into the consuming star (E$>$XXX; \citealt{}), throwing its atmosphere and interior our of equilibrium and leading to the production of enlarged convective regions, elevated levels of magnetic activity, stellar envelope inflation, and a spin-up in stellar rotation rate \citep{}. Outflows and jets of appreciable speeds ($v>$100's km/s), powered by the stellar collision itself, contaminates the intervening space with quick-forming dust, molecules, and gas \citep{}. Over time, these outflows sweep up and build up appreciable mass, initiating interstellar shocks that change the energetic properties of interstellar material around them and potentially destroying the dust-rich matter formed as the outflow cooled away from its stellar merger origins.
 
 % % What is the motivation to look in for X-ray signals?
-% A key gap in our knowledge about stellar merger processes and long-term impacts on the outcomes of their stellar properties and systems is whether stellar collisions, whether grazing or direct, ignites or enhances magnetic activity on the impacted star(s). Stellar magnetic fields, if present, influence almost every aspect of their environments. Magnetic coupling to surrounding dust and gas left bound in orbit around the stellar merger remnant leads to accretion onto the star, providing a source of material to replenish the star(s) and leading to elevated levels of high energy radiation, in the form of line and continuum emissions, spanning the UV to the X-ray \citep{}. These increased levels of radiations further impact the stellar environment, ionizing particles and leading to changes in chemistry of the circumstellar disk over time. Magnetorotational accretion may lead to sustained outflows and jets, pumping more material to the surrounding ISM \citep{}. In other astrophysical accretion disks, stellar magnetic fields play a key role in the dispersion of the disks, defining their expected lifetimes and impact on the final properties of the stellar system \citep{}. 
+% A key gap in our knowledge about stellar merger processes and long-term impacts on the outcomes of their stellar properties and systems is whether stellar collisions, whether grazing or direct, ignites or enhances magnetic activity on the impacted star(s). Stellar magnetic fields, if present, influence almost every aspect of their environments. Magnetic coupling to surrounding dust and gas left bound in orbit around the stellar merger remnant leads to accretion onto the star, providing a source of material to replenish the star(s) and leading to elevated levels of high energy radiation, in the form of line and continuum emissions, spanning the UV to the X-ray \citep{}. These increased levels of radiations further impact the stellar environment, ionizing particles and leading to changes in chemistry of the circumstellar disk over time. Magnetorotational accretion may lead to sustained outflows and jets, pumping more material to the surrounding ISM \citep{}. In other astrophysical accretion disks, stellar magnetic fields play a key role in the dispersion of the disks, defining their expected lifetimes and impact on the final properties of the stellar system \citep{}.
 
 
 %%%% New intro: Outline
 %% 1. TYC and BRN discovery as recent (1000's years old) stellar merger event
 %% 2. Prime laboratory to test and explore theorized behaviors and evolution of such systems
-%% 3. Serendipitous discovery of X-ray emission by Chandra begs the question: what is generating this high energy radiation both in the BRN and near TYC? 
+%% 3. Serendipitous discovery of X-ray emission by Chandra begs the question: what is generating this high energy radiation both in the BRN and near TYC?
 %% 4. Outline of study
-Binary and multi-star systems make up over 1/3 of the star systems in the Galaxy \citep{Raghavan+2010}. It is no surprise, then, that eventually, closely orbiting binary stars may interact through events that exchange and shed matter from one star to another (e.g., common envelope evolution (CEE)) or end with the complete engulfment of one star by another (e.g., \citealt{Ivanova+2013}). TYC 2597-735-1 is one of only a few examples of a recent ($t \sim$ 2,000 - 5,000 years ago), unobscured (E(B-V) $\sim$ 0.02) stellar merger remnant found to date \citep{2020Natur.587..387H}. This makes TYC 2597-735-1 a rare astrophysical laboratory where we can test physical models of stellar merger behaviors, characteristics, and long-term evolution. 
+Binary and multi-star systems make up over 1/3 of the star systems in the Galaxy \citep{Raghavan+2010}. It is no surprise, then, that eventually, closely orbiting binary stars may interact through events that exchange and shed matter from one star to another (e.g., common envelope evolution (CEE)) or end with the complete engulfment of one star by another (e.g., \citealt{Ivanova+2013}). TYC 2597-735-1 is one of only a few examples of a recent ($t \sim$ 2,000 - 5,000 years ago), unobscured (E(B-V) $\sim$ 0.02) stellar merger remnant found to date \citep{2020Natur.587..387H}. This makes TYC 2597-735-1 a rare astrophysical laboratory where we can test physical models of stellar merger behaviors, characteristics, and long-term evolution.
 
 One key stellar behavioral shift that may rise as a result of a stellar merger is the generation of a strong magnetic field \citep{Schneider+2016}. Roughly 10\% of intermediate- to high-mass stars ($M_{\star} \gtrsim$ 1.5 $M_{\odot}$) have strong magnetic fields, whose origins are currently unknown (e.g., \citealt{Donati+2009,Fossati+2015,Grunhut+2017}). \citet{Soker&Tylenda2007} showed that the extended envelope of a merger product may host a large convective region. Paired with a rapid rotation rate, an efficient dynamo may result, giving rise to strong magnetic activity. The presence of magnetic fields has strong implications on the long-term evolution of the stellar merger system. For example, magnetic fields may drive magnetorotational accretion of surrounding material, help slow down rapidly rotating stars via magnetic breaking, and power jets (e.g., \citealt{Schneider+2020}). All these mechanisms, over long timescales, have consequences on the final outcome of a stellar merger remnant as it settles to its equilibrium state.
 
 \citet{Soker&Tylenda2007} suggest the strongest magnetic activity tied to a stellar merger's revitalized dynamo may last centuries. Recent suspected stellar mergers (like red luminous novae) are obscured from view by outflows ejected during the merger event itself (e.g., \citealt{Bond+2003, Tylenda+2016}). TYC 2597-735-1 shows evidence that it harbors a persisting, strong magnetic field \citep[e.g., H$\alpha$ emission and variability, radial velocity shifts strongly correlated with the Ca II IRT stellar atmospheric features][]{2020Natur.587..387H}. One way to test whether its hypothetical magnetic field exists is to look for signs of X-ray emission at TYC 2597-735-1 and compare its luminosity to the remnant's bolometric luminosity \citep{Soker&Tylenda2007}.
 
-TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring Nebula'' (BRN; \citealt{2020Natur.587..387H}), were partially observed by chance with Chandra over a decade ago. Here, we report the findings of this serendipitous \emph{Chandra} observation and present a new \emph{TESS} lightcurve. We explore whether the X-ray emission observed at TYC 2597-735-1 is consistent with dynamo-driven magnetic field activity or other sources near the star. We summarize the stellar properties of TYC 2597-735-1 in Section~\ref{sec:properties}}. In Section~\ref{sec:data}, we describe the observations, the source detection methods implemented to retrieve X-ray signal from regions in the BRN and around TYC 2597-735-1 and the X-ray properties of these regions. In Section~\ref{sec:discussion}, we explore different physical mechanisms that may explain the X-ray luminosity and spectral characteristics observed for TYC 2597-735-1 and place physical limits on the properties of the BRN shock region from its X-ray diagnostics. We conclude in Section~\ref{sec:summary} with a summary and describe prospects for future observations. 
+TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring Nebula'' (BRN; \citealt{2020Natur.587..387H}), were partially observed by chance with Chandra over a decade ago. Here, we report the findings of this serendipitous \emph{Chandra} observation and present a new \emph{TESS} lightcurve. We explore whether the X-ray emission observed at TYC 2597-735-1 is consistent with dynamo-driven magnetic field activity or other sources near the star. We summarize the stellar properties of TYC 2597-735-1 in Section~\ref{sec:properties}. In Section~\ref{sec:data}, we describe the observations, the source detection methods implemented to retrieve X-ray signal from regions in the BRN and around TYC 2597-735-1 and the X-ray properties of these regions. In Section~\ref{sec:discussion}, we explore different physical mechanisms that may explain the X-ray luminosity and spectral characteristics observed for TYC 2597-735-1 and place physical limits on the properties of the BRN shock region from its X-ray diagnostics. We conclude in Section~\ref{sec:summary} with a summary and describe prospects for future observations.
 
 
 
-%Its past stellar collision was made possible by the chance discovery of a unique, exclusively far ultraviolet (FUV)-emitting ring of diffuse light surrounding it. This FUV ring nebula, so-called the ``blue ring nebula'' (BRN), was captured by the {\it GALEX} space telescope in 2004 and was found to be powered by molecular hydrogen (H$_2$) fluorescence: H$_2$ colliding with energetic electrons in their proximity that were released when a forward shock swept through the nebulous material. That same H$_2$ was launched in a massive outflow from the explosive merger of two stars in the TYC 2597-735-1 system $\grtsim$2,000 years ago. Forward of the H$_2$ fluorescence ring are filametantary shocks outlining the BRN, which shows line emission from many transitions in the H-Balmer line series. \citet{2020Natur.587..387H} find that the ratio of the Balmer line luminosities suggest the shock front is non-radiative: that the density of the shock is low and is not able to efficiently cool. 
+%Its past stellar collision was made possible by the chance discovery of a unique, exclusively far ultraviolet (FUV)-emitting ring of diffuse light surrounding it. This FUV ring nebula, so-called the ``blue ring nebula'' (BRN), was captured by the {\it GALEX} space telescope in 2004 and was found to be powered by molecular hydrogen (H$_2$) fluorescence: H$_2$ colliding with energetic electrons in their proximity that were released when a forward shock swept through the nebulous material. That same H$_2$ was launched in a massive outflow from the explosive merger of two stars in the TYC 2597-735-1 system $\grtsim$2,000 years ago. Forward of the H$_2$ fluorescence ring are filametantary shocks outlining the BRN, which shows line emission from many transitions in the H-Balmer line series. \citet{2020Natur.587..387H} find that the ratio of the Balmer line luminosities suggest the shock front is non-radiative: that the density of the shock is low and is not able to efficiently cool.
 
 % Like other proposed recent stellar mergers (e.g., BP Psc \citep{Zuckermann+2008}, TYC 4144-329-2 \citep{Melis+2009}, and HD 233517 \citep{Jura2004}), TYC 2597-735-1 appears young, with enhanced stellar activity, signs of an appreciable circumstellar disk, and a potential, ongoing outflow/jet powered by accretion from this disk onto the stellar remnant. TYC 2597-735-1's location in the Galaxy, however, gives away its age: it is located within the thick disk population of stars in the Galactic halo, where the youngest stars are $\sim$2 Gyr \citep{}, and its 3-dimensional velocity matches it well to this population of stars. Most protostars lose the majority of their planet-forming disk mass after $\sim$10 Myr \citep{}, making it highly unlikely that TYC 2597-735-1  has retained a disk of its formation materials after so long.
 
@@ -289,8 +289,8 @@ Text for TESS Secton Hoadley 2020 noticed a scatter significantly larger than th
 
 \section{Data analysis} \label{sec:data}
 \subsection{Data reduction}
-TYC 2597-735-1 was observed by Chandra on 2007-11-26 for 8.7~ks. 
-We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4.13.0 \citep{2006SPIE.6270E..1VF} in the VFAINT mode, which reduces the background compared to the default FAINT mode processing. This is a serendipitous observation where TYC 2597-735-1 falls by chance on one of the outer CCDs (CCD S2 on the ACIS-S array). TYC 2597-735-1 is located close to the chip edge and only a fraction of the H$\alpha$ and UV emitting regions around the central star is covered in the observations. Because TYC 2597-735-1 is located off-axis, the PSF is significantly wider than on-axis. Figure~\ref{fig:chandraimage} shows the positions of individual X-ray photons overlayed on the H$\alpha$ images and UV emission contours from \citet{2020Natur.587..387H}, limited to a soft X-ray band. 
+TYC 2597-735-1 was observed by Chandra on 2007-11-26 for 8.7~ks.
+We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4.13.0 \citep{2006SPIE.6270E..1VF} in the VFAINT mode, which reduces the background compared to the default FAINT mode processing. This is a serendipitous observation where TYC 2597-735-1 falls by chance on one of the outer CCDs (CCD S2 on the ACIS-S array). TYC 2597-735-1 is located close to the chip edge and only a fraction of the H$\alpha$ and UV emitting regions around the central star is covered in the observations. Because TYC 2597-735-1 is located off-axis, the PSF is significantly wider than on-axis. Figure~\ref{fig:chandraimage} shows the positions of individual X-ray photons overlayed on the H$\alpha$ images and UV emission contours from \citet{2020Natur.587..387H}, limited to a soft X-ray band.
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{figures/chandraimage.pdf}
@@ -321,7 +321,7 @@ We detect a source at the location of TYC 2597-735-1 with (in our narrow band im
 
 We do detect two other features that are both located just inside the ring of H$\alpha$, one of them is almost due North of TYC 2597-735-1, and the other one to the East (Fig.~\ref{fig:chandraimage}, see table~\ref{tab:src} for source properties).  Neither the GAIA DR2 \citep{2016A&A...595A...1G,2018A&A...616A...1G} nor the 2MASS \citep{2006AJ....131.1163S} catalog show any point sources coinciding with these features; thus the X-ray emission cannot be caused by a foreground star. Together with the soft X-ray spectrum (see below) this also rules out most classes of X-ray background objects. Again, the fact that both features are located at a physically meaningful position between the UV emission (white contour Fig.~\ref{fig:chandraimage}) and the bright H$\alpha$ ring (background image in Fig.~\ref{fig:chandraimage}) argues that these are not background fluctuations, but probably very weak sources that are physically associated with the outflow. However, the number of detected photons is low and only deeper X-ray observations will be able to unambiguously confirm these detections.
 
-Given the low number of counts and the size of the Chandra PSF that far away from the aimpoint, all three sources are compatible with point sources, but we expect that the latter two sources are probably spatially extended just like the H$\alpha$ and the UV emission is. However, the low count number does not allow us to actually fit the source shape or extent, so we treat them like point sources below. 
+Given the low number of counts and the size of the Chandra PSF that far away from the aimpoint, all three sources are compatible with point sources, but we expect that the latter two sources are probably spatially extended just like the H$\alpha$ and the UV emission is. However, the low count number does not allow us to actually fit the source shape or extent, so we treat them like point sources below.
 
 We also search for extended emission on larger scales that coincide with either the FUV emission (using a region bounded by the white contours  in Fig.~\ref{fig:chandraimage}) or a region FUV and H$\alpha$, i.e.\ a ring on the outside of the white contour in Fig.~\ref{fig:chandraimage} that contains the sources labelled ``X-North'' and ``X-East''. The latter might be a sign of a shocked, X-ray emitting region in front of the FUV emission. However, we do not know a-priory which level of contour lines might be correlated, so the selection of the region is somewhat arbitrary. We do not see significantly enhanced emission --except for the three point-like sources discussed above-- compared to a background region on the northern half of the chip. To obtain an order-of-magnitude estimate how bright an extended source would have to be for a secure detection, we take the $3\sigma$ uncertainty of the observed background flux (about $10^{-5}$~counts~s$^{-1}$~arcsec$^{-2}$) in the same 1-2~keV energy range as for the source detection above and convert that the number into an energy flux per surface area in the plane of the sky. We find that emission would have to be stronger than a few times $10^{31}$~erg~s${-1}$~pc$^{-2}$ in this band to be detected significantly above the background.
 
@@ -352,7 +352,7 @@ The combined spectrum for the other two emission regions is shown in Fig.~\ref{f
 
 
 \subsection{Optical photometry}
-The Transiting Exoplanet Survey Satellite (TESS; \citealt{Ricker2015}) observed TYC 2597-735-1 in its sector 25 and camera 1 from 2020-May-13 until 2020-Jun-08. 
+The Transiting Exoplanet Survey Satellite (TESS; \citealt{Ricker2015}) observed TYC 2597-735-1 in its sector 25 and camera 1 from 2020-May-13 until 2020-Jun-08.
 TESS is an optical photometry mission with four 24x24 degree cameras operating in the 600-1000\,nm range. The spacecraft scans through the entire sky in sectors of $\sim28$\,day duration, whereby each sector is divided into two satellite orbits of $\sim14$\,day duration.
 We identified TYC 2597-735-1 as TIC 284856863 in the TESS Input Catalog version 8 \citep{Stassun2019} and found that it fell into TESS's full-frame images with 30 min cadence.
 We retrieved the mission's official MIT quick-look-pipeline (QLP) light curve from the High-Level Science Products (HLSP) via the Mikulski Archive for Space Telescopes (MAST) archive.
@@ -397,16 +397,16 @@ There are a variety of physical mechanisms that may be responsible for the X-ray
 % Keri - 07/12
 % Ken's models are consistent with Brian's estimates (Cx ~ 1.0e-4), so we can tweek Brian's numbers by the factors from the models and the results should be the same. The early time overturn timescale (t<2,000 years) produces too high a Rossby number to create magnetic activity (like Ken said), unless the rotation period of this star was much higher in the past. I don't know how we might estimate that, though.
 
-% My suggestion is that we can create a table with the convection properties over time from the models, provided by Ken below (I can do this). From that, we can show that we don't expect the surface convection zone properties to be sufficient to lead to detectable levels of magnetic activity, as the Rossby number was probably too high up until t~5,000 years (with the caveat of the rotation period of the surface, which is not known)(unless Ken's models also tell us that?). At t~5,000 years, the Rossby number falls into the regime where it could lead to magnetic activity, and it is on order what Brian already reported: higher than nominal MS and giant stars, but lower than pre-MS stars (which tend to be in the saturated zone, Cx ~ 1.0e-3). 
+% My suggestion is that we can create a table with the convection properties over time from the models, provided by Ken below (I can do this). From that, we can show that we don't expect the surface convection zone properties to be sufficient to lead to detectable levels of magnetic activity, as the Rossby number was probably too high up until t~5,000 years (with the caveat of the rotation period of the surface, which is not known)(unless Ken's models also tell us that?). At t~5,000 years, the Rossby number falls into the regime where it could lead to magnetic activity, and it is on order what Brian already reported: higher than nominal MS and giant stars, but lower than pre-MS stars (which tend to be in the saturated zone, Cx ~ 1.0e-3).
 %
-The measure by which the level of magnetic activity for pre-main sequence, main sequence, and giant stars has often been invoked is a star's Rossby number \citep{Preibisch+2005, Pizzolato+2003, Gondoin+2005}. 
+The measure by which the level of magnetic activity for pre-main sequence, main sequence, and giant stars has often been invoked is a star's Rossby number \citep{Preibisch+2005, Pizzolato+2003, Gondoin+2005}.
 The Rossby number, which is the ratio of convective overturn velocity to rotational period, i.e.
 
 \begin{equation}
 {\rm Ro} \sim \frac{P_{\rm rot}}{\tau_{\rm conv}},
 \end{equation}
 
-has notable correlations with main sequence stellar magnetic activity and is well established in the frame of stellar dynamo models (e.g., \citealt{Brandenburg+1998}). 
+has notable correlations with main sequence stellar magnetic activity and is well established in the frame of stellar dynamo models (e.g., \citealt{Brandenburg+1998}).
 
 \citet{2020Natur.587..387H} used a series of \texttt{MESA} models to simultaneously track the temporal behavior of a recent stellar merger to match its properties to observed characteristics of TYC 2597-735-1 and estimate the original binary star properties (in particular, M$_{\star}$) that best matches the anticipated age (from the expansion rate of the BRN) and observed properties of TYC 2597-735-1 today. Using the best-fit model output from \citet{2002ApJ...576L.149R}, we extract the properties of possible convection zones that may have arisen in TYC 2597-735-1 post-merger with a 0.1 M$_{\odot}$ companion. The primary star in the \texttt{MESA} evolutionary model has a mass M$_{\star}$ = 2.17 M$_{\odot}$ and a radius R$_{\star}$ = 5 R$_{\odot}$. The models suggest the primary (surviving) star may have two prominent convection zones that persist $>$5,000 years after the stellar merger: a deep convection zone ($\sim$0.5 R$_{\odot}$), and a surface one. As the dynamo near the stellar surface is the one that likely controls magnetic activity, we focus on the properties of the surface convection zone of our modeled star.
 
@@ -432,11 +432,11 @@ Thus, taking $L_{\rm bol} = 100L_{\odot}$ for TYC and ${\rm Ro} = 4$, we find th
 
 Current observations suggest TYC 2597-735-1 harbors a substantial circumstellar disk, which may have an inner rim as close as $\sim$0.1 AU \citep{2020Natur.587..387H}. Much like planet-forming accretion disks, complex interactions between these disks and stars via magnetospheric accretion can lead to matter falling onto the star, potentially generating X-rays at free-fall shock regions \citep[e.g.]{2007A&A...466.1111G}. Here, we explore whether this accretion shock near TYC 2597-735-1 provides the right conditions to generate the observed $L_{\rm X}$ and subsequent 1-2 keV photons.
 
-We follow the formulation of the expected accretion shock characteristics of a magnetically driven accretion column presented in \citet{2007A&A...466.1111G }. TYC 2597-735-1 has a reported mass $M_{\star} \approx$ 1.5 - 2 $M_{\odot}$, radius $R_{\star} \approx$ 10 $R_{\odot}$, luminosity $L_{\star} \approx$ 100 $L_{\odot}$, and mass accretion rate $\dot{M} \approx$ 10$^{-7} M{\odot}/{\rm yr}$. The free fall velocity of material onto TYC 2597-735-1 is 
+We follow the formulation of the expected accretion shock characteristics of a magnetically driven accretion column presented in \citet{2007A&A...466.1111G}. TYC 2597-735-1 has a reported mass $M_{\star} \approx$ 1.5 - 2 $M_{\odot}$, radius $R_{\star} \approx$ 10 $R_{\odot}$, luminosity $L_{\star} \approx$ 100 $L_{\odot}$, and mass accretion rate $\dot{M} \approx$ 10$^{-7} M{\odot}/{\rm yr}$. The free fall velocity of material onto TYC 2597-735-1 is
 \begin{equation}
     v_{\rm ff} = \left( \frac{2 G M_{\star}}{R_{\star}} \right)^{1/2} \left( 1 - \frac{R_{\star}}{R_{\rm M}} \right)^{1/2} \approx 280 \left( \frac{M_{\star}}{0.5 M_{\odot}} \right)^{1/2} \left( \frac{R_{\star}}{2 R_{\odot}} \right)^{-1/2} km/s,
 \end{equation}
-or $v_{\rm ff} \lesssim$ 260 km/s \citep{2020Natur.587..387H}. At this free fall velocity, the temperature of the shocked material as it accretes onto the denser stellar atmosphere is  
+or $v_{\rm ff} \lesssim$ 260 km/s \citep{2020Natur.587..387H}. At this free fall velocity, the temperature of the shocked material as it accretes onto the denser stellar atmosphere is
 \begin{equation}
     T_{\rm sh} = \frac{3}{16} \left( \frac{\mu m_{\rm H}}{k_{B}} \right) v_{\rm ff}^{2} \approx 8.85 \times 10^{5} \left( \frac{M_{\star}}{0.5 M_{\odot}} \right) \left( \frac{R_{\star}}{2 R_{\odot}} \right)^{-1} K,
 \end{equation}
@@ -454,7 +454,7 @@ The present day accretion rate onto TYC was estimated from its $H\alpha$ luminos
 \be
 L_{\rm j} \approx \frac{1}{2}\eta_{\rm j}\dot{M}_{\star}v_{\rm j}^{2} \approx 5\times 10^{32}\,{\rm erg\,s^{-1}}\,\left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm w}}{400\,{\rm km\,s^{-1}}}\right)^{2},
 \ee
-This is in principle sufficient to explain the X-ray point source overlapping TYC, $L_{\rm X} \sim 10^{31}$ erg s$^{-1}$.  This energy could be extracted through internal shocks, for instance as a result of the wind velocity increasing with time due to the radial contraction of TYC (and hence increase of the escape speed from the inner edge of the accretion disk) as the star undergoes thermal-timescale contraction following the merger (see Hoadley+20, extended Figure 7).  
+This is in principle sufficient to explain the X-ray point source overlapping TYC, $L_{\rm X} \sim 10^{31}$ erg s$^{-1}$.  This energy could be extracted through internal shocks, for instance as a result of the wind velocity increasing with time due to the radial contraction of TYC (and hence increase of the escape speed from the inner edge of the accretion disk) as the star undergoes thermal-timescale contraction following the merger (see Hoadley+20, extended Figure 7).
 
 If the jet is conical in shape and subtends a fraction $f_{\Omega} < 1$ of the total $4\pi$ solid angle, then the radial density profile of the jet is approximately given by
 \begin{eqnarray}
@@ -467,7 +467,7 @@ N_{\rm H} \approx \int_{r}^{\infty} n_{\rm j}dr &=& \frac{\eta_{\rm j}\dot{M}_{\
  &\approx& 2\times 10^{15}\,{\rm cm^{-2}} \left(\frac{\eta_{\rm j}}{0.1}\right)\left(\frac{f_{\Omega}}{0.1}\right)^{-1}\left(\frac{\dot{M}_{\star}}{10^{-7}M_{\odot}\,\rm yr^{-1}}\right)\left(\frac{v_{\rm j}}{400\,{\rm km\,s^{-1}}}\right)^{-1}\left(\frac{r}{1\,{\rm pc}}\right)^{-1},
 \label{eq:NHjet}
 \end{eqnarray}
-where $m_p$ is the proton mass and we have normalized $r$ to a maximum radius corresponding to outer extent of the BRN. 
+where $m_p$ is the proton mass and we have normalized $r$ to a maximum radius corresponding to outer extent of the BRN.
 
 Equation (\ref{eq:NHjet}) shows that, in principle, jetted X-ray emission could originate from radii as small as $\sim 10^{-6}$ pc (corresponding to $\sim 10^{-4}$'' projected angular offset from TYC) and not overproduce the $N_{\rm H} \approx 10^{21}-10^{22}$ cm$^{-1}$ values of the X-ray source.  At this radius, the density could be as high as $n_{\rm j}(10^{-4}{\rm pc}) \sim 10^{7}{\rm cm^{-3}},$ more than sufficient for any shocks in the outflow to be radiative (i.e., to cool through UV/X-ray emission faster than the radial expansion time) and hence to tap into a sizable fraction of the jet power, $L_{\rm j}$, to power the observed X-ray emission.
 
@@ -478,10 +478,10 @@ Shock in outflows have been observed in X-ray sources of different evolutionary 
 Using the strong shock conditions we can transform the thermal energy
 k$T$, where k is Boltzmann's constant and $T$ is the temperature, into
 the pre-shock velocity in the shock rest frame $v_{\mathrm{shock}}$:
-\begin{equation} 
-\left(\frac{v_{\mathrm{shock}}}{500\textnormal{ km s}^{-1}}\right)^2 \approx 
+\begin{equation}
+\left(\frac{v_{\mathrm{shock}}}{500\textnormal{ km s}^{-1}}\right)^2 \approx
 \frac{\textnormal{k}T}{0.33\textnormal{ keV}} \; .
-\label{vkt} 
+\label{vkt}
 \end{equation}
 For a travelling shock wave, the pre-shock gas velocity is the sum of $v_{\mathrm{shock}}$ and the motion of the shock front.
 
@@ -494,16 +494,16 @@ semi-analytical formula for the cooling length  %ttps://www.overleaf.com/project
 $d_{\mathrm{cool}}$ of gas
 heated in fast shocks ($\Delta v \ga 200$ km/s) which we can rewrite as:
 \begin{equation}
-d_{\mathrm{cool}} \approx 20.9 \mathrm{ AU} 
-    \left(\frac{10^5\mathrm{ cm}^{-3}}{n_0}\right) 
+d_{\mathrm{cool}} \approx 20.9 \mathrm{ AU}
+    \left(\frac{10^5\mathrm{ cm}^{-3}}{n_0}\right)
     \left(\frac{v_{\mathrm{shock}}}{500\textnormal{ km s}^{-1}}\right)^{4.5},
-\label{raga} 
+\label{raga}
 \end{equation}
 where $n_0$ is the pre-shock particle number density, equal to a
 quarter of the post-shock number density $n$ in the strong shock
-approximation.  
+approximation.
 
-Assuming that $d_{\mathrm{cool}}$ is much smaller than the size scale of the outflow we can neglect spherical expansion over the thickness of the shock. 
+Assuming that $d_{\mathrm{cool}}$ is much smaller than the size scale of the outflow we can neglect spherical expansion over the thickness of the shock.
 The
 mass flow rate $\dot M_{\rm shock}$ through the shock front with
   area $A$ is then given by
@@ -522,12 +522,12 @@ $\mu=1.26$.  It is worth noting that $\dot M_{\rm shock}$ is less than the
 The area of the shock can be determined from
 \begin{eqnarray}
 \label{eqn_area}
-A = \pi R^2 = {\mathrm{Volume} \over d_{\mathrm{cool}}} = 
+A = \pi R^2 = {\mathrm{Volume} \over d_{\mathrm{cool}}} =
     {VEM \over n_{\mathrm{e}} n_{\mathrm{ion}} d_{\mathrm{cool}}},
 \end{eqnarray}
 where $n_{\mathrm{e}}$ and $n_{\mathrm{ion}}$ are the post-shock
-  electron and ion number density. 
-  
+  electron and ion number density.
+
 \emph{HMG: Not sure this is useful, but I had the formulas in latex anyway, so I just pasted them in here.}
 
 \subsubsection{Shock Interaction with the ISM}
@@ -582,7 +582,7 @@ which is consistent with the lower limit of the BRN mass cited in \citet{2020Nat
 \begin{acknowledgements}
 This research has made use of data obtained from the Chandra Data Archive and the Chandra Source Catalog, and software provided by the Chandra X-ray Center (CXC) in the application packages CIAO and Sherpa. This publication makes use of data products from the Two Micron All Sky Survey, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation. We acknowledge the use of TESS High Level Science Products (HLSP) produced by the Quick-Look Pipeline (QLP) at the TESS Science Office at MIT, which are publicly available from the Mikulski Archive for Space Telescopes (MAST). Funding for the TESS mission is provided by NASA's Science Mission directorate.
 This work has made use of data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.
-HMG was supported by the National Aeronautics and Space Administration through Chandra Award Number GO9-20018X issued by the Chandra X-ray Observatory Center, which is operated by the Smithsonian Astrophysical Observatory for and on behalf of the National Aeronautics Space Administration under contract NAS8-03060. 
+HMG was supported by the National Aeronautics and Space Administration through Chandra Award Number GO9-20018X issued by the Chandra X-ray Observatory Center, which is operated by the Smithsonian Astrophysical Observatory for and on behalf of the National Aeronautics Space Administration under contract NAS8-03060.
 KH was supported by the David {\&} Ellen Lee Prize Postdoctoral Fellowship in Experimental Physics at Caltech and the National Aeronautics and Space Administration Astrophysics Research and Analysis (APRA) Grant Number 80NSSC20K0395.
 MNG acknowledges support from MIT's Kavli Institute as a Juan Carlos Torres Fellow.
 \end{acknowledgements}
