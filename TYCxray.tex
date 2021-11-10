@@ -193,8 +193,9 @@
 \affiliation{The University of Iowa, Dept. of Physics \& Astronomy, Van Allen Hall, Iowa City, IA, 52242, USA}
 \affiliation{California Institute of Technology, Dept. of Physics, Mathematics, and Astronomy, Cahill Center for Astronomy \& Astrophysics, Pasadena, CA 91125, USA}
 \author[0000-0002-3164-9086]{Maximilian N. G{\"u}nther}
+\thanks{Juan Carlos Torres Fellow, ESA Research Fellow}
 \affiliation{Department of Physics, and Kavli Institute for Astrophysics and Space Research, Massachusetts Institute of Technology, 77 Massachusetts Avenue, Cambridge, MA 02139, US}
-\affiliation{Juan Carlos Torres Fellow}
+\affiliation{European Space Agency (ESA), European Space Research and Technology Centre (ESTEC), Keplerlaan 1, 2201 AZ Noordwijk, The Netherlands}
 \author[0000-0002-4670-7509]{Brian D. Metzger}
 \affiliation{Department of Physics and Columbia Astrophysics Laboratory, Columbia University, Pupin Hall, New York, NY 10027, USA}
 \affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 5th Ave, New York, NY 10010, USA}
@@ -252,7 +253,7 @@ TYC 2597-735-1 and the last vestiges of its dissolving outflow, the ``Blue Ring 
 \label{sec:properties}
 
 \begin{table}
-\caption{Stellar properties from \citet{2020Natur.587..387H} \label{tab:parameters}}
+\caption{\textbf{Present day} stellar properties from \citet{2020Natur.587..387H} \label{tab:parameters}}
 \begin{tabular}{lcr}
 \hline \hline
 parameter & symbol & value \\
@@ -283,7 +284,8 @@ We retrieved Chandra OBSID 8636 from  the archive and reprocessed it with CIAO 4
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{figures/chandraimage.pdf}
-    \caption{X-ray emission around TYC 2597-735-1. The grey-scale image shows H$\alpha$ emission and the white contours outline the UV emission. Data for both is taken from \citet{2020Natur.587..387H}, see there for details. The colored squares mark the position of individual X-ray photons, where the color denotes the energy of each particular photon. Only photons in the energy range given on the color bar are shown. Yellow circles mark the position of the three detected sources and their 90\% PSF size, which we use as the extraction region to extract spectra. The thin yellow lines outlines the area covered by Chandra in the observation.}
+\caption{X-ray emission around TYC 2597-735-1. The grey-scale image shows H$\alpha$ emission and the white contours outline the UV emission. Data for both is taken from \citet{2020Natur.587..387H}, see there for details. \textbf{The white contour line is drawn at} $6\times 10^{-4}$~counts~s$^{-1}$~pix$^{-1}$ \textbf{in an image smoothed by a Gaussian filter with} $\sigma=4.5$\arcsec{} \textbf{(3 pixels). This level corresponds to twice the background rate, and is} $>10\sigma$ \textbf{significant in the smoothed image.}
+    The colored squares mark the position of individual X-ray photons, where the color denotes the energy of each particular photon. Only photons in the energy range given on the color bar are shown. Yellow circles mark the position of the three detected sources and their 90\% PSF size, which we use as the extraction region to extract spectra. The thin yellow lines outlines the area covered by Chandra in the observation.}
     \label{fig:chandraimage}
 \end{figure*}
 
@@ -293,18 +295,19 @@ We expect any emission from the outflows to be soft (section~\ref{sec:outflow}),
 and run a source detection with the CIAO \texttt{wavdetect} task, which convolves the input image with a wavelet, taking the size of the PSF at that image location into account. We bin up the image such that it contains $2.6\times10^4$ pixels in the region of interest (the bottom half of the CCD that contains TYC 2597-735-1, marked by the yellow outline in Figure~\ref{fig:chandraimage}) and set the significance threshold such that we expect 0.25 false positive sources in this region. That way, any source detected by \texttt{wavdetect} is likely to be real. We find three sources (table~\ref{tab:src}), all of which coincide with UV/optical emission features. All three sources have similar count rates and similar PSF sizes and thus similar positional uncertainties of about 2\arcsec{}.
 
 \begin{table*}
-\caption{Detected X-ray sources\label{tab:src}}
+\caption{Detected X-ray sources in the 0.5-2.0~keV band\label{tab:src}}
 \begin{tabular}{ccccccc}
 \hline \hline
 name & RA & DEC & $\sigma_\mathrm{RA}$ & $\sigma_\mathrm{DEC}$ & NET COUNTS & BKG COUNTS\\
- &  &  & $\mathrm{{}^{\prime\prime}}$ & $\mathrm{{}^{\prime\prime}}$ & $\mathrm{ct}$ & $\mathrm{ct}$ \\
+ &  &  & $\mathrm{{}^{\prime\prime}}$ & $\mathrm{{}^{\prime\prime}}$ & $\mathrm{ct}$ & $\mathrm{ct}$ & $\mathrm{ct}$ & $\mathrm{ct}$ \\
 \hline
-TYC 2597-735-1 & $16^\mathrm{h}48^\mathrm{m}38^\mathrm{s}$ & $35^\circ12{}^\prime11{}^{\prime\prime}$ & 3.2 & 2.0 & $7.5 \pm 3.0$ & $1.52 \pm 0.01 $\\
-X-East & $16^\mathrm{h}48^\mathrm{m}50^\mathrm{s}$ & $35^\circ12{}^\prime28{}^{\prime\prime}$ & 2.2 & 2.6 & $3.9 \pm 2.2$ & $1.08 \pm 0.01 $\\
-X-North & $16^\mathrm{h}48^\mathrm{m}35^\mathrm{s}$ & $35^\circ15{}^\prime34{}^{\prime\prime}$ & 2.8 & 3.2 & $6.0 \pm 2.8$ & $1.96 \pm 0.02$ \\
+TYC 2597-735-1 & $16^{\mathrm{h}}48^{\mathrm{m}}38^{\mathrm{s}}$ & $35^\circ12{}^\prime12{}^{\prime\prime}$ & 3.1 & 2.0 & $9.8 \pm 3.6$ & $3.17 \pm 0.02$ \\
+X-North & $16^{\mathrm{h}}48^{\mathrm{m}}35^{\mathrm{s}}$ & $35^\circ15{}^\prime31{}^{\prime\prime}$ & 2.6 & 3.3 & $7.1 \pm 3.3$ & $3.91 \pm 0.02$\\
+X-East & $16^{\mathrm{h}}48^{\mathrm{m}}50^{\mathrm{s}}$ & $35^\circ12{}^\prime19{}^{\prime\prime}$ & 4.1 & 1.7 & $15.5 \pm 4.7$ & $6.47 \pm 0.03$ \\
 \hline
 \end{tabular}
 \end{table*}
+
 
 
 We detect a source at the location of TYC 2597-735-1 with (in our narrow band image) $9\pm3$ counts on a background of $1.52\pm0.01$ counts. The background is known to a high precision because \texttt{wavdetect} determines it over a large area. Additionally, the probability that any one source randomly overlaps with the known position of TYC 2597-735-1 within the 90\% PSF radius (0.28 arcmin for an energy of 1.5~keV and at the position of TYC 2597-735-1) is only 0.2\%. Thus, we regard this as a highly reliable detection of X-ray emission from TYC 2597-735-1, albeit with large uncertainties on flux and spectral properties due to the small number of counts.
@@ -322,7 +325,7 @@ We extract spectra for all three sources using circular extraction regions that 
 
 The spectrum for TYC 2597-735-1 is shown in Fig.~\ref{fig:TYC_spec}. We fit $N_\mathrm{H}=(6\pm5)\times10^{21}$~cm$^{-2}$ and a plasma temperature in the range 0.1-1.5~keV, where the low end of the temperature range requires very large values of $N_\mathrm{H}$ and emission measure. For temperatures around 1~keV, common for stellar sources, the unabsorbed flux is of order $10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $3\times 10^{30}$~erg~s$^{-1}$ with uncertainties of a factor of a few.
 
-The total galactic absorption in this line of sight is about $N_\mathrm{H}=2\times10^{21}$~cm$^{-2}$ \citep{1990ARA&A..28..215D}. Fitting just the temperature, but fixing the absorbing column density leads to a model with similar spectral shape (red line in Fig.~\ref{fig:TYC_spec}), but a preferred higher temperature $kT=4_{-3}^{+\infty}$~keV.
+The total galactic absorption in this line of sight is about $N_\mathrm{H}=2\times10^{21}$~cm$^{-2}$ \citep{1990ARA&A..28..215D}. Fitting just the temperature, but fixing the absorbing column density leads to a model with similar spectral shape (\textbf{green} line in Fig.~\ref{fig:TYC_spec}), but a preferred higher temperature $kT=4_{-3}^{+\infty}$~keV.
 For low count numbers, there is a fundamental degeneracy between plasma temperature and absorbing column density: A cool, but bright plasma with a high $N_\mathrm{H}$ produces a spectrum very similar to the spectrum emitted from a hotter, but less absorbed plasma.
 Assuming the hotter spectrum, a weaker source ($2\times10^{-14}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $5\times 10^{29}$~erg~s$^{-1}$) could be sufficient to explain the observed photons; on the other hand, there could still be a second, cooler, component that is hidden by the $N_\mathrm{H}$, thus the flux given is a lower limit only. \cite{2020Natur.587..387H} found essentially no reddening towards TYC 2597-735-1, but depending on the position of the X-ray emitting gas it is possible that accretion columns or the disk are in our line-of-sight and that the $N_\mathrm{H}$ observed in X-rays is larger than the reddening of the optical spectra.
 
@@ -479,31 +482,29 @@ The Rossby number, or the ratio of the rotation period $P_{\rm rot}$ to the conv
 \end{equation}
 exhibits notable correlations with main sequence stellar magnetic activity and is well established in the frame of stellar dynamo models (e.g., \citealt{Brandenburg+1998}).
 
-\citet{2020Natur.587..387H} use a series of \texttt{MESA} models to simultaneously track the temporal behavior of a recent stellar merger to match its properties to observed characteristics of TYC 2597-735-1 and estimate the original binary star properties (in particular, M$_{\star}$) that best matches the anticipated age (from the expansion rate of the BRN) and observed properties of TYC 2597-735-1 today. Using the best-fit model output from \citet{2020Natur.587..387H}, we extract the properties of possible convection zones that may have arisen in TYC 2597-735-1 post-merger with a 0.1 M$_{\odot}$ companion. The primary star in the \texttt{MESA} evolutionary model has a mass M$_{\star}$ of 2.17 M$_{\odot}$ and a radius R$_{\star}$ of 5 R$_{\odot}$. The models suggest the primary (surviving) star may have two prominent convection zones that persist $>$5,000 years after the stellar merger: a deep convection zone ($\sim$0.5 R$_{\odot}$) and a surface convection zone. As the dynamo near the stellar surface is the one that likely controls magnetic activity, we focus on the properties of the surface convection zone of our modeled star.
+\citet{2020Natur.587..387H} use a series of \texttt{MESA} models to simultaneously track the temporal behavior of a recent stellar merger to match its properties to observed characteristics of TYC 2597-735-1 and estimate the original binary star properties (in particular, M$_{\star}$) that best matches the anticipated age (from the expansion rate of the BRN) and observed properties of TYC 2597-735-1 today. Using the best-fit model output from \citet{2020Natur.587..387H}, we extract the properties of possible convection zones that may have arisen in TYC 2597-735-1 post-merger with a 0.1 M$_{\odot}$ companion. The primary star in the \texttt{MESA} evolutionary model \textbf{is set to} a \textbf{pre-merger} mass M$_{\star}$ of 2.17 M$_{\odot}$ and a \textbf{pre-merger} radius R$_{\star}$ of 5 R$_{\odot}$. The models suggest the primary (surviving) star may have two prominent convection zones that persist $>$5,000 years after the stellar merger: a deep convection zone ($\sim$0.5 R$_{\odot}$) and a surface convection zone. As the dynamo near the stellar surface is the one that likely controls magnetic activity, we focus on the properties of the surface convection zone of our modeled star.
 
 
-\begin{deluxetable}{l c c c c c c c}
-%\tabletypesize{\footnotesize}
-\tablecaption{Surface Convection Zone Properties of TYC 2597-735-1 Best-fit \texttt{MESA} Evolutionary Model
+\begin{table}
+
+\caption{Surface Convection Zone Properties of TYC 2597-735-1 Best-fit \texttt{MESA} Evolutionary Model
 	\label{tab:mesa}}
-\tablewidth{0pt}
-\tablecolumns{7}
-\tablehead{
-	\colhead{Time} & \colhead{$R_{\star}$} & \colhead{$r_{\rm conv}$} & \colhead{$v_{\rm conv, max}$} & \colhead{$\tau_{\rm conv} == r_{\rm conv}/v_{\rm conv, max}$} & \colhead{{\bf Ro}} & \colhead{${\rm C_X}$} \\
-	 {(years)}     &    {($R_{\odot}$)}    & {(10$^{10}$ cm)}           & {(10$^{6}$ cm/s)}        & {(days)} &
-}
-\startdata
+\begin{tabular}{r c c c c | c l}
+\hline\hline
+\multicolumn{5}{c|}{Best-fit \texttt{MESA} Evolutionary Model} & \multicolumn{2}{c}{obs. value} \\
+Time & $R_{\star}$ & $r_{\rm conv}$ & $v_{\rm conv, max}$ & $\tau_{\rm conv} = \frac{r_{\rm conv}}{v_{\rm conv, max}}$ & Ro & ${\rm C_X}$ \\
+(years)    &    ($R_{\odot}$)   & (10$^{10}$ cm)           & (10$^{6}$ cm/s)        & (days) \\
+\hline
 %
-	100  & 14.9 & 0.774 & 1.33 & 0.0673 & 453.6 & -  \\
-	200  & 12.9 & 0.534 & 1.23 & 0.0503 & 454.9 & -  \\
-	500  & 11.0 & 0.581 & 1.05 & 0.0642 & 259.2 & -  \\
-	1000 & 9.9  & 2.12 & 0.785 & 0.312  & 43.2  & -  \\
-	2000 & 8.8  & 4.24 & 0.559 & 0.877  & 12.1  & 1E-3\\
-	5000 & 7.4  & 7.63 & 0.341 & 2.589  & 2.9   & 6E-5 \\
-\enddata
-
-
-\end{deluxetable}
+	100  & 14.9 & 0.774 & 1.33 & 0.0673 & 200 & 0.3  \\
+	200  & 12.9 & 0.534 & 1.23 & 0.0503 & 270 & 0.5  \\
+	500  & 11.0 & 0.581 & 1.05 & 0.0642 & 210 & 0.3  \\
+	1000 & 9.9  & 2.12 & 0.785 & 0.312  & 44 & 0.01  \\
+	2000 & 8.8  & 4.24 & 0.559 & 0.877  & 16  & 0.002\\
+	5000 & 7.4  & 7.63 & 0.341 & 2.589  & 5   & 0.0002 \\
+\hline
+\end{tabular}
+\end{table}
 
 
 Table~\ref{tab:mesa} presents the primary star's stellar radius ($R_{\star}$), total height of the surface convection zone ($r_{conv}$), the maximum convective velocity within the convective region ($v_{conv,max}$), and the corresponding overturn time ($\tau_{\rm conv}$) at different snapshots in time since $t=0$ of the complete stellar merger in the \citet{2020Natur.587..387H} best-fit \texttt{MESA} model for TYC 2597-735-1.
@@ -539,8 +540,8 @@ For comparison, we include \object{FK Com}, the prototype of the FK Comae Bereni
 \object{BP Psc} is another giant, suspected to be the result of a recent merger. Unlike the FK~Com stars, BP~Psc does have circumstellar material, including a disk and a bright jet \citep{Zuckerman_2008}.
 \citet{2010ApJ...719L..65K} observed $\log(L_\mathrm{X}/L_\mathrm{bol})$ between -5.8 and -4.2; the absorbing column density is very high, leaving the amount of soft X-ray emission unconstrained. Until recently, it was unclear if BP~Psc is a close-by young star, or an evolved giant, but GAIA data has resolved this controversy. With the new distance and spectral type, \citet{2019MNRAS.490.3158C} estimate a radius of $6.4\;R_\sun{}$. Assuming that the stellar rotation axis is aligned with the symmetry axis of the disk ($i=75\pm10$ degree), we can convert the rotational broadening of $v \sin i=38$~km~s$^{-1}$ \citep{Zuckerman_2008} into a period of 8.2~d and place BP~Psc in Fig.~\ref{fig:lxbol}.
 
-Furthermore, we look at three central objects in planetary nebula (PN). These objects may originate from a similar evolutionary path as FK~Com systems. We interpret FK Com systems as remnants of a stellar merger that happened during a common envelope phase, while in the PN LoTr~5, the central binary could have survived the common envelope phase, with some mass transfer between the components \citep{1996A&A...307..200J}.
-X-ray data and luminosities for central objects of PN are taken from \citet{2010ApJ...721.1820M}. The central objects of \object{HFG 1} and \object{DS 1} are members of close binary systems, and we show them in Figure~\ref{fig:lxbol} assuming that their rotation period matches their orbital period. Both objects are rapid rotators and show other signs of magnetic activity as well; DS~1 may have undergone a flare during the observation, which might explain why its observed $\log(L_\mathrm{X}/L_\mathrm{bol})$ is brighter than the saturation limit \citep{2010ApJ...721.1820M}. The central object of \object{LoTr 5} has been repeatedly observed with Doppler-imaging \citep{2019A&A...624A..83K}, so the period is well known. The objects displays both cool and warm spots. Warm spots live longer (three months) and are located on average at higher latitudes than cool spots; the surface flow has an anti-solar differential rotation.
+%Furthermore, we look at three central objects in planetary nebula (PN). These objects may originate from a similar evolutionary path as FK~Com systems. We interpret FK Com systems as remnants of a stellar merger that happened during a common envelope phase, while in the PN LoTr~5, the central binary could have survived the common envelope phase, with some mass transfer between the components \citep{1996A&A...307..200J}.
+%X-ray data and luminosities for central objects of PN are taken from \citet{2010ApJ...721.1820M}. The central objects of \object{HFG 1} and \object{DS 1} are members of close binary systems, and we show them in Figure~\ref{fig:lxbol} assuming that their rotation period matches their orbital period. Both objects are rapid rotators and show other signs of magnetic activity as well; DS~1 may have undergone a flare during the observation, which might explain why its observed $\log(L_\mathrm{X}/L_\mathrm{bol})$ is brighter than the saturation limit \citep{2010ApJ...721.1820M}. The central object of \object{LoTr 5} has been repeatedly observed with Doppler-imaging \citep{2019A&A...624A..83K}, so the period is well known. The objects displays both cool and warm spots. Warm spots live longer (three months) and are located on average at higher latitudes than cool spots; the surface flow has an anti-solar differential rotation.
 
 Figure~\ref{fig:lxbol} shows that all these different classes of objects behave remarkably similar: Despite some scatter, stars of different sizes and with different evolutionary histories show a clear increase in $\log(L_\mathrm{X}/L_\mathrm{bol})$ with decreasing period. The (single or binary) field giants tend to be a little to the right (in the left panel) of the MS stars, i.e.\ they reach a similar level of $\log(L_\mathrm{X}/L_\mathrm{bol})$ for a longer rotation period than MS stars; on the other hand, they are to the left of MS stars in Rossby number (right panel). Our recent merger candidates (FK Com, TYC 2597-735-1, and BP Psc) as well as the central stars in planetary nebula behave in the opposite way: They tend to have shorter periods than MS stars for a given $\log(L_\mathrm{X}/L_\mathrm{bol})$, but --at least in the case of TYC 2597-735-1 where we have stellar structure simulations to estimate the Rossby number-- a larger Rossby number for a given $\log(L_\mathrm{X}/L_\mathrm{bol})$.
 

@@ -1,0 +1,88 @@
+We thank the referee for a thorough and well-though out report that touches on a number of issues in the paper and will certainly help us to improve and considerable streamline the manuscript. We have highlighted added or changed text in bold font. Text that has been removed following the referees suggestions is noted in our reply to the referee below. Answers to individual points are keyed in between the referee's comments.
+
+
+
+>>> My biggest concern is that Section 4.1.3 and Tables 1 and 3 seem to suffer some inconsistencies. A note to Table 3 needs to appear saying that the description of the various columns appears in the text (and give the section number). Line 262 states a mass and radius for the primary star of TYC 2597 735 1 of 2.17 M_sun and 5 R_sun. Is this before the merger? It seems inconsistent with what is given in Table 1 (which I assume are present-day values); please provide the time at which the line 262 mass and radius are obtained. In general it is not clear where Table 1 lines up with Table 3. Table 1 seems to suggest values for 1000-5000 years after the merger, yet the stellar radius given in Table 1 matches 500 years in Table 3. Similarly, if I calculate Prot by multiplying Ro and tau_conv for each row in Table 3 (which maybe it isn't appropriate to do?) I get a Prot of 13.5 days for a time of 1000 years in Table 3. This corresponds to an Ro of 43.2 which should not produce X-ray emission according to the discussion in Section 4.1.3. Yet the authors argue the star currently has a Prot of 13.7 days from RV (and TESS) monitoring. The C_X value most consistent with what is observed for typical main sequence-to-early subgiants appears for a time of 5000 years in Table 3. I get that the model is likely not perfect, but these various inconsistencies do not inspire confidence in the proposed interpretation. The authors need to clarify at what timestep reported stellar parameters come from whenever they are reported and address the apparent inconsistencies described here.
+
+
+-> Re-read nature. I think:
+- the value in line 262 is pre-merger
+- the simulation are not for this star but taken fomr a gird and this happens to be the close
+- Which value do we take from the table?
+- Can I blame this all on the nature paper and simply point to that?
+
+>>> Also concerning is that there is a disconnect between the tone of the abstract/conclusion and the analysis presented in the main text of the paper. The weak/marginal detections and caveats of some of the analysis preclude a definitive conclusion on the origin of the X-ray emission from the central star of the BRN. While the text acknowledges this appropriately for the most part, the abstract, conclusion, and a few spots in the main text seem overly confident and should be softened. The major point here is that the authors have constructed a model that is a reasonable fit to the data; however, the authors cannot conclusively rule out other models and the tone of the text in all places should reflect that. Changes to the manuscript should be made for lines 21-24 of the abstract (but see more about the TESS data below), line 69, line 276, lines 340-341, and line 422.
+
+>>> Along these lines, I wondered what other evidence might exist that could help in discerning between dynamo-based activity and accretion-related activity as the source of the X-ray emission from the BRN central star. BP Psc and TYC 4144 329 2 both have infrared excess emission like the BRN central star, so I looked at their available spectroscopic and lightcurve data. BP Psc has obvious outflow signatures in its optical spectrum (e.g., forbidden emission lines) and clearly detected jets (Zuckerman et al. 2008). TYC 4144 329 2 has a spectrum more like TYC 2597 735 1, although with larger vsini (Melis et al. 2009). It does however have a strong and broad HeI 5875 absorption feature which Melis et al. (2009) claim is evidence for accretion. TYC 2597 735 1 does not appear to have any such feature, although the authors may wish to investigate that more thoroughly. BP Psc and TYC 4144 329 2 both have lightcurve data showing ~10-20\% variability (BP Psc also has what appears to be flares in its K2 lightcurve data). The TESS lightcurve of TYC 4144 329 2 is reminiscent of TYC 2597 735 1, although amplified. Indeed, if one took only the last ~5 days of each portion of the TESS lightcurve for TYC 4144 329 2 (as was done by the authors when analyzing the lightcurve for TYC 2597 735 1), then they might conclude that the star has a ~15 day periodicity, whereas with the complete lightcurve such a period seems less likely. I do not require the authors to do anything with what I have discussed in this paragraph, but maybe it would be of some value to them to consider these additional data.
+
+>>> As suggested in the previous paragraphs, there are concerns around the authors' use of the TESS data. Indeed the Sector 25 images that include TYC 2597 735 1 suffer from heightened scattered light. Based on this, the authors question the reliability of nearly 2/3 of the lightcurve. They then question if aliasing with the TESS orbit might be responsible for the repeated apparent brightening of TYC 2597 735 1 at the end of each portion of the TESS lightcurve where the data should be of good quality. If so much of the lightcurve is compromised and if aliasing is a potential issue in the uncompromised data, then how much value is there in the TESS data? Certainly it is not possible to make any robust conclusions on the nature of variability (e.g., is it periodic) in the small segments of remaining data and the authors should not do so. While caveats to any interpretations based on the TESS data appear in the Section 3.4, they appear to be forgotten in the abstract and conclusion sections. Overall I find that the TESS data do not add much to this paper and that they could very well be omitted. Should the authors decide to include the TESS data, they should minimize any interpretations and conclusions based on them.
+
+-> Delete TESS? My feeling is that the TESS case is better than then it's in Max text so maybe we can meet in the middle - certain that up a bit, keep the TESS discussion, and downplay only a little in the abstract and conclusions.
+
+
+>>> Figures 1 and 2 need clarification regarding what is shown and their discussion in the text. What is shown in Figure 1 and what is given in Table 2 seem incongruent. X-East seems to have far more photons in its yellow circle than does X-North in Figure 1. Is every recorded event shown?
+
+In the previous version, we had used a very narrow energy band (1.0-2.0 keV) for source detection in an effort to reduce the background (when we increase the energy band, we add background, but not signal because we do not expect the source to contribute any hard photons). Numbers for just this energy range were given in table 2, as explained in the text. In contrast, in the figure 1, we showed photons from a wider energy range (0.5-3 keV); that is why more photons could be seen in Figure 1 than are listed in Table 2.
+However, we take the referees comments as a sign that this approach is confusing to the reader. We have thus redone our source detection in a slightly wider band (0.5-3.0 keV) and we know use the same energy band for source detection, for table 2 and for Figure 1. That means that some numbers in the text change, mostly in section 3.2 to be consistent with that new run of the source detection. Fortunately, this change simplifies the flow of the text a bit. 
+We than re-run our spectral extraction and spectral fitting. Since the source position that the wavdetect algorithm determines in the new energy band differs slightly from the source positions in the old energy band (but compatible within the errors), the spectral extraction extracts slightly different regions on the chip and the spectra look slightly different. We have thus also replaced Fig 2 and 3 and changed the numbers for the fitted models. 
+None of the scientific conclusions change, but all the numbers are slightly different.
+
+>>> The meaning of the white contours is not well-explained. In the text it says the white contours show the region where a search for X-ray emission from forward/reverse shocks is conducted. The white contours in Figure 1 clearly include point sources, so they must be defined by some flux or significance level. More description about how the white contours are drawn out on the figure is necessary, especially since they are used to inform analysis on the shock emission.
+
+We added a more detailed explanation for the which contours.
+
+>>> For Figure 2, in the text on line 152 it says a red line shows the fixed column density model. This line appears to be green in the actual figure.
+
+Fixed. We used red in an earlier version of the figure, but switched to green later, because it's easier to distinguish from orange and forgot the change the text accordingly.
+
+>>> More importantly, it is stated in the figure caption that the "Error bars are shown just to guide the eye" (I assume this is similarly the case for Figure 3). This is insufficient. How are the error bars derived? Do they have actual meaning? 
+
+As we say in the text, the fitting of the X-ray data is done on what is usually called "unbinned" data (but more precisely should be described as "without rebinning of the default ACIS PHA channels"). ACIS has > 1000 PHA channels, but we only have ~15 photons. So, a plot that has 1009 symbols at 0 and 15 at 1 in units of "photons per channel" is not a very instructive plot to look at by eye, even though it contains, statistically speaking, more information than a plot where the counts are rebinned into broader energy bins. So, for plotting purposes, the data is rebinned to have at least 2 counts in each bin. The error bars in the figure are not used for the fit, because the fit is done using the Cash statistic and unbinned data; they are calculated using sherpa's standard implemementation for error bars of count data (sqrt(N), for N > 0, 1 for N=0). They are to "guide the eye" in the sense that they are not used for fitting, just for looking. We have reworded that sentence.
+
+>>> Why are X-ray data values shown in Figure 3 for energies between 2-2.5 keV when they are not in Figure 2? In the text it says these regions are contaminated, so if they are omitted in one figure then they should be in both.
+
+They used to be shown in both plots. In Fig 2, there happens to be little signal, but looking closely, there was a blue symbol at ~2.8 keV with x-errorbars that indicate a bin width from about 1.8 to 3.5 keV which spans over the 2.0-2.5 keV line. 
+
+We have modified the plots slecting the bin edges to co-incide with the ignore 2.0-2.5 keV region. 
+
+ 
+
+>>> For Equations 1-5 and 9-13 a reference (or references) should be cited that derive these relations in greater detail. If the authors got them from a textbook then please cite the relevant textbook. The meaning of "mp" in Eq. 13 is not given.
+
+-> We have added a few pointers and some more detail, but we do not deem is necessary to give a full reference for each equation. In particular, eqn 4 and 5 are just different versions of E = 1/2 m v^2
+
+>>> The Gaia parallax for BP Psc should not be regarded as a secure quantity. Viewing this source in Gaia EDR3 shows that the RUWE is very high (10.541) and the astrometric excess noise is very significant (1.98e+04) and has value comparable to the measured parallax (3.818 mas compared to 4.7970 mas). A reliable parallax measurement should have RUWE near 1.0, small to zero astrometric excess noise significance, and an astrometric excess noise value much less than the measured parallax. The appropriate way to handle BP Psc (and sources like it) is to add in quadrature the excess noise to the reported parallax uncertainty (e.g., https://ui.adsabs.harvard.edu/abs/2018evn..confE..43V/abstract). This would yield for BP Psc a Gaia EDR3 parallax value of 4.80 +/- 3.85 mas, not exactly a good measurement and certainly not one to be used in assessing the radius of BP Psc. The noisy astrometry for BP Psc likely is due to the source being resolved and/or having variable dust structures (e.g., Zuckerman et al. 2008). The text in lines 312-316 should be removed as well as BP Psc in Figure 5.
+
+The error bar shown for L_X BP Psc in Figure 5 is taken from Kastner et al (2010), which pre-dates GAIA. Details can be found in that paper, but knowing the distance is actually not important to calculate L_X/L_bol since both L_X and L_bol scale with d^2 and the ratios is thus independent of the actual distance to the source. 
+
+Zuckerman+ 08 argue that the vsini should be interpreted as an upper limit, because the line may have additional broadening from dust scattering.
+
+>>> The paragraph that follows on lines 317-328 is also of questionable value. The discussion does not seem robust (rotation periods aren't measured for two objects, just assumed; one object is overluminous in X-rays and might have flared; why does discussion on the longevity of warm vs cool spots appear?) and binary planetary nebulae aren't the same as mergers. As the inclusion of these objects mostly serves to distract from the discussion in this subsection, I recommend removing this paragraph and the appearance of the featured planetary nebulae in Figure 5.
+
+
+>>> Section 1, lines 36-38: HD 233517 was suggested by Jura (2003, ApJ, 582, 1032) to be a possible merger remnant.
+
+
+>>> Section 3.1, line 86: please give the PI of the original Chandra program.
+
+
+>>> Section 3.2, line 104: positional uncertainties in Table 2 are closer to 2.5-3.0".
+
+>>> line 115: please give a citation for typical spectral properties for X-ray background objects.
+
+>>> line 116: "..between the forward and the.."?
+
+>>>Section 3.4, line 178: what is shown in Figure 4 is not a detrended lightcurve. A detrended lightcurve is effectively flat around a value of 1.0 (KSPSAP_FLUX column in the QLP).
+
+>>> lines 192-194: it isn't clear if the authors mean a shift in the B-band flux level between distinct epochs or between measurements during monitoring in a single epoch. Please clarify.
+
+>>> Section 4.1.3, lines 251-252: this sentence is confusing and should be rewritten.
+
+>>> Section 4.2.1, line 360: "..as an upper limit..".
+
+>>> line 375: should this mass flux be a limit?
+
+>>> line 379: "..the dynamics of a stellar merger are,".
+
+>>> Sections 4.2.1 and 4.2.2, lines 374 and 414: in one place it says M_BRN < 0.008 M_sun, the other M_BRN >~ 0.008 M_sun. Which is it? Please check the analysis based on this quantity.
+
