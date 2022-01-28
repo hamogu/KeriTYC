@@ -283,7 +283,7 @@ TYC 2597-735-1 was observed by Chandra on 2007-11-26 for 8.7~ks.
 We retrieved Chandra OBSID 8636 \textbf{(PI: Murray)} from  the archive and reprocessed it with CIAO 4.13.0 \citep{2006SPIE.6270E..1VF} in the VFAINT mode, which reduces the background compared to the default FAINT mode processing. This is a serendipitous observation where TYC 2597-735-1 falls by chance on one of the outer CCDs (CCD S2 on the ACIS-S array). TYC 2597-735-1 is located close to the chip edge and only a fraction of the H$\alpha$ and UV emitting regions around the central star is covered in the observations. Because TYC 2597-735-1 is located off-axis, the PSF is significantly wider than on-axis. Figure~\ref{fig:chandraimage} shows the positions of individual soft X-ray photons overlayed on the H$\alpha$ images and UV emission contours from \citet{2020Natur.587..387H}.
 \begin{figure*}
     \centering
-    \includegraphics[width=\textwidth]{figures/chandraimage.pdf}
+    \includegraphics[width=\textwidth]{chandraimage.pdf}
 \caption{X-ray emission around TYC 2597-735-1. The grey-scale image shows H$\alpha$ emission and the white contours outline the UV emission. Data for both is taken from \citet{2020Natur.587..387H}, see there for details. \textbf{The white contour line is drawn at} $6\times 10^{-4}$~counts~s$^{-1}$~pix$^{-1}$ \textbf{in an image smoothed by a Gaussian filter with} $\sigma=4.5$\arcsec{} \textbf{(3 pixels). This level corresponds to twice the background rate, and is} $>10\sigma$ \textbf{significant in the smoothed image.}
     The colored squares mark the position of individual X-ray photons, where the color denotes the energy of each particular photon. Only photons in the energy range given on the color bar are shown. Yellow circles mark the position of the three detected sources and their 90\% PSF size, which we use as the extraction region to extract spectra. The thin yellow lines outline the area covered by Chandra in the observation.}
     \label{fig:chandraimage}
@@ -331,7 +331,7 @@ For low count numbers, there is a fundamental degeneracy between plasma temperat
 Assuming the hotter spectrum, a weaker source ($2\times10^{-14}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $8\times 10^{29}$~erg~s$^{-1}$) could be sufficient to explain the observed photons; on the other hand, there could still be a second, cooler, component that is hidden by the $N_\mathrm{H}$, thus the flux given is a lower limit only. \cite{2020Natur.587..387H} found essentially no reddening towards TYC 2597-735-1, but depending on the position of the X-ray emitting gas it is possible that accretion columns or the disk are in our line-of-sight and that the $N_\mathrm{H}$ observed in X-rays is larger than the reddening of the optical spectra.
 
 \begin{figure}
-    \plotone{figures/TYC_spec.pdf}
+    \plotone{TYC_spec.pdf}
     \caption{Spectrum of TYC 2597-735-1 binned for display purposes. Error bars shown \textbf{are calculated as $\sigma_N = \sqrt{N}$ for a bin with $N > 0$ counts and $\sigma_N=1$ for $N=0$. This is just to guide the eye; the fit is performed minimizing the Poisson likelihood on unbinned data.} The orange line shows the best fit model with $N_\mathrm{H}$ as a fitted parameter, for the green model $N_\mathrm{H}$ is fixed as described in the text. Black crosses show the background rate, scaled from a much larger area. The background feature that caused us to ignore the region 2.0-2.5~keV (grey) in the fit is also visible. Error bars on the background are omitted for clarity.
     \label{fig:TYC_spec}}
 \end{figure}
@@ -339,7 +339,7 @@ Assuming the hotter spectrum, a weaker source ($2\times10^{-14}$~erg~s$^{-1}$~cm
 We combined the spectra for X-East and X-North because the count number is very low and X-ray properties (see the color of the detected photons in Fig.~\ref{fig:chandraimage}) and location (between H$\alpha$ ring and UV emission) are similar.
 We fit $N_\mathrm{H}=(1.3_{-0.3}^{+0.5})\times10^{22}$~cm$^{-2}$ and a plasma temperature of $0.5_{-0.3}^{+\infty}$~keV (Fig.~\ref{fig:combined}). For temperatures around 0.5~keV, which we will argue are physically reasonable in Sect~\ref{sec:outflow}, the unabsorbed flux is of order $4.4 \times 10^{-13}$~erg~s$^{-1}$~cm$^{-2}$, which corresponds to $1.5\times10^{31}$~erg~s$^{-1}$ with uncertainties of a factor a few. As in the case for TYC 2597-735-1, a hotter source with a lower flux seen through a lower absorbing column density could also generate the observed spectrum.
 \begin{figure}
-    \plotone{figures/combined.pdf}
+    \plotone{combined.pdf}
     \caption{Combined spectrum from the two X-ray detected regions in the outflow. See Fig.~\ref{fig:TYC_spec} for an explanation of symbols.
     \label{fig:combined}}
 \end{figure}
@@ -363,7 +363,7 @@ However, the similarity of the expected stellar rotation period and the TESS orb
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/TESS_light_curve.pdf}
+    \includegraphics[width=0.8\textwidth]{TESS_light_curve.pdf}
     \caption{TESS light curve and background flux for TYC 2597-735-1. The observations taken in sector 25 with camera 1 range from 2020-May-13 until 2020-Jun-08. The light curve has been corrected for background effects and displays significant variability. While the start of each TESS orbit suffer from systematics caused by Earth's scattered light (grey-shaded areas), the end of each orbit shows brightness increases that could be of astrophysical nature.
     \label{fig:TESS_light_curve}}
 \end{figure*}
@@ -535,7 +535,7 @@ where the constant $C_{\rm x}$ varies with the stellar system. We present the $C
 \subsubsection{Comparison to other recent merger candidates}
 \label{sect:comparison}
 \begin{figure}
-    \plotone{figures/lxlbol.pdf}
+    \plotone{lxlbol.pdf}
     \caption{X-ray activity level for TYC 2597-735-1 compared to some other dwarfs and giants as a function of rotation period (left) and Rossby number (right), see text for a discussion of uncertainties adopted for TYC 2597-735-1 and references for the samples shown. Error bars are omitted for clarity for samples with more than five stars.
     \label{fig:lxbol}}
 \end{figure}
